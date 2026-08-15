@@ -254,30 +254,65 @@
 
       <section class="detail-section" id="resources">
         <h2>설계 · 검증 자료</h2>
-        <div class="resource-grid">
-          <a class="resource-card" href="../../assets/projects/tuktak-rag-report.pdf" target="_blank" rel="noopener">
-            <strong>RAG 구현 테스트 보고서</strong>
-            <span>리스크 리포트 RAG 검색 흐름 검증</span>
+        <div class="evidence-grid">
+          <a class="evidence-card" href="../../assets/projects/tuktak-deploy-architecture.png" target="_blank" rel="noopener">
+            <div class="evidence-thumb">
+              <img src="../../assets/projects/resource-thumbs/deploy-architecture.png" alt="TUKTAK 배포 아키텍처" />
+            </div>
+            <div class="evidence-copy">
+              <h3>배포 시스템 아키텍처</h3>
+              <p>AWS, GitHub Actions, Docker, ECR/ECS, S3/CloudFront 기반 배포 흐름을 정리했습니다.</p>
+            </div>
           </a>
-          <a class="resource-card" href="../../assets/projects/tuktak-image-threshold-report.pdf" target="_blank" rel="noopener">
-            <strong>이미지 Threshold 보고서</strong>
-            <span>이미지 유사사례 검색 기준 설계</span>
+
+          <a class="evidence-card" href="../../assets/projects/tuktak-rag-report.pdf" target="_blank" rel="noopener">
+            <div class="evidence-thumb">
+              <img src="../../assets/projects/resource-thumbs/rag.png" alt="RAG 구현 테스트 보고서" />
+            </div>
+            <div class="evidence-copy">
+              <h3>RAG 구현 테스트 보고서</h3>
+              <p>리스크 리포트에서 필요한 근거 문서를 ChromaDB로 검색하고 UNKNOWN/FAILED 기준을 검증했습니다.</p>
+            </div>
           </a>
-          <a class="resource-card" href="../../assets/projects/tuktak-text-rule-engine-report.pdf" target="_blank" rel="noopener">
-            <strong>텍스트 Rule Engine 보고서</strong>
-            <span>수리 요청 텍스트 유효성 검사 기준</span>
+
+          <a class="evidence-card" href="../../assets/projects/tuktak-image-threshold-report.pdf" target="_blank" rel="noopener">
+            <div class="evidence-thumb">
+              <img src="../../assets/projects/resource-thumbs/image-threshold.png" alt="이미지 Threshold 보고서" />
+            </div>
+            <div class="evidence-copy">
+              <h3>이미지 Threshold 설계</h3>
+              <p>이미지 유사사례 검색에서 오답 통과를 줄이기 위한 모델과 threshold 기준을 설계했습니다.</p>
+            </div>
           </a>
-          <a class="resource-card" href="../../assets/projects/tuktak-photo-quality-report.pdf" target="_blank" rel="noopener">
-            <strong>사진 품질 검사 보고서</strong>
-            <span>OpenCV 기반 입력 이미지 검수 설계</span>
+
+          <a class="evidence-card" href="../../assets/projects/tuktak-text-rule-engine-report.pdf" target="_blank" rel="noopener">
+            <div class="evidence-thumb">
+              <img src="../../assets/projects/resource-thumbs/text-rule.png" alt="텍스트 Rule Engine 보고서" />
+            </div>
+            <div class="evidence-copy">
+              <h3>텍스트 유효성 검사 설계</h3>
+              <p>모호한 입력, 가격 질문, 위험 요청, 정보 부족 입력을 검증하는 Rule Engine 기준을 정리했습니다.</p>
+            </div>
           </a>
-          <a class="resource-card" href="../../assets/projects/tuktak-llm-evaluation-report.pdf" target="_blank" rel="noopener">
-            <strong>LLM 성능평가 보고서</strong>
-            <span>구조화 라벨 예측 결과 비교</span>
+
+          <a class="evidence-card" href="../../assets/projects/tuktak-photo-quality-report.pdf" target="_blank" rel="noopener">
+            <div class="evidence-thumb">
+              <img src="../../assets/projects/resource-thumbs/photo-quality.png" alt="사진 품질 검사 보고서" />
+            </div>
+            <div class="evidence-copy">
+              <h3>OpenCV 사진 전처리 평가</h3>
+              <p>조명 불량, 흐림, 정상 사진을 분류하는 전처리 기준을 실험해 Vision LLM 전달 전 검수 단계를 설계했습니다.</p>
+            </div>
           </a>
-          <a class="resource-card" href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">
-            <strong>프로젝트 요약 Repo</strong>
-            <span>AI 백엔드와 RAG 구현 요약</span>
+
+          <a class="evidence-card" href="../../assets/projects/tuktak-llm-evaluation-report.pdf" target="_blank" rel="noopener">
+            <div class="evidence-thumb">
+              <img src="../../assets/projects/resource-thumbs/llm-evaluation.png" alt="LLM 성능평가 보고서" />
+            </div>
+            <div class="evidence-copy">
+              <h3>LLM 구조화 성능평가</h3>
+              <p>수리 요청 문장을 구조화 라벨로 변환하는 모델별 성능과 처리 결과를 비교했습니다.</p>
+            </div>
           </a>
         </div>
       </section>
