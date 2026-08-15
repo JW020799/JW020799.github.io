@@ -152,16 +152,19 @@
 
       <section class="detail-section">
         <h2>문제 해결 과정</h2>
-        <div class="result-grid">
-          <article class="result-card">
+        <div class="solution-grid">
+          <article class="solution-card">
+            <span class="solution-icon">!</span>
             <strong>이미지 유사도 오답 통과</strong>
             <p>단순 정확도보다 오답 통과를 더 위험하게 보고, 카테고리별 threshold를 보수적으로 설계했습니다.</p>
           </article>
-          <article class="result-card">
+          <article class="solution-card">
+            <span class="solution-icon">?</span>
             <strong>RAG 검색 근거 부족</strong>
             <p>근거 문서가 부족한 경우 LOW로 출력하지 않고 UNKNOWN/FAILED 처리하도록 기준을 정리했습니다.</p>
           </article>
-          <article class="result-card">
+          <article class="solution-card">
+            <span class="solution-icon">#</span>
             <strong>문서 카테고리 편중</strong>
             <p>PRICE, SAFETY, FIELD, EXTRA_COST 등 리스크 유형별 문서 보완 필요성을 도출했습니다.</p>
           </article>
@@ -199,18 +202,22 @@
         <h2>기술 스택</h2>
         <div class="stack-grid">
           <article>
+            <span class="stack-icon">AI</span>
             <h3>AI / RAG</h3>
             <p>LangGraph, LangChain, ChromaDB, Ko-SRoBERTa, Nomic Embed Vision</p>
           </article>
           <article>
+            <span class="stack-icon">API</span>
             <h3>Backend / Data</h3>
             <p>Python, FastAPI, SQLAlchemy, MySQL, REST API</p>
           </article>
           <article>
+            <span class="stack-icon">AWS</span>
             <h3>Cloud / DevOps</h3>
             <p>AWS S3, CloudFront, ECR, ECS, RDS, Docker, GitHub Actions</p>
           </article>
           <article>
+            <span class="stack-icon">DOC</span>
             <h3>Planning / Collaboration</h3>
             <p>GitHub Branch/PR, API 명세서, ERD, 발표자료, 시연영상</p>
           </article>
@@ -227,6 +234,18 @@
           <a class="resource-card" href="../../assets/projects/tuktak-image-threshold-report.pdf" target="_blank" rel="noopener">
             <strong>이미지 Threshold 보고서</strong>
             <span>이미지 유사사례 검색 기준 설계</span>
+          </a>
+          <a class="resource-card" href="../../assets/projects/tuktak-text-rule-engine-report.pdf" target="_blank" rel="noopener">
+            <strong>텍스트 Rule Engine 보고서</strong>
+            <span>수리 요청 텍스트 유효성 검사 기준</span>
+          </a>
+          <a class="resource-card" href="../../assets/projects/tuktak-photo-quality-report.pdf" target="_blank" rel="noopener">
+            <strong>사진 품질 검사 보고서</strong>
+            <span>OpenCV 기반 입력 이미지 검수 설계</span>
+          </a>
+          <a class="resource-card" href="../../assets/projects/tuktak-llm-evaluation-report.pdf" target="_blank" rel="noopener">
+            <strong>LLM 성능평가 보고서</strong>
+            <span>구조화 라벨 예측 결과 비교</span>
           </a>
           <a class="resource-card" href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">
             <strong>프로젝트 요약 Repo</strong>

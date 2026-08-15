@@ -643,6 +643,7 @@ a {
 }
 
 .result-grid,
+.solution-grid,
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -650,6 +651,7 @@ a {
 }
 
 .result-card,
+.solution-card,
 .resource-card {
   padding: 24px;
   border-radius: 22px;
@@ -657,11 +659,58 @@ a {
 }
 
 .result-card strong,
+.solution-card strong,
 .resource-card strong {
   display: block;
   margin-bottom: 8px;
   color: var(--blue);
   font-size: 15px;
+}
+
+.solution-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 190px;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(39, 100, 216, 0.13), transparent 28%),
+    #f4f7fb;
+}
+
+.solution-card::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -34px;
+  width: 98px;
+  height: 98px;
+  border: 1px solid rgba(39, 100, 216, 0.16);
+  border-radius: 50%;
+}
+
+.solution-icon,
+.stack-icon {
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: 18px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--blue), #173f96);
+  font-weight: 900;
+  box-shadow: 0 12px 30px rgba(39, 100, 216, 0.22);
+}
+
+.solution-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  font-size: 18px;
+}
+
+.solution-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--muted);
 }
 
 .resource-card {
@@ -731,10 +780,31 @@ a {
 .architecture-flow article,
 .process-grid article,
 .stack-grid article {
+  position: relative;
+  overflow: hidden;
   min-height: 150px;
   padding: 24px;
   border-radius: 22px;
   background: var(--tint);
+}
+
+.stack-grid article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 86px;
+  height: 86px;
+  border-bottom-left-radius: 100%;
+  background: rgba(39, 100, 216, 0.09);
+}
+
+.stack-icon {
+  width: 54px;
+  height: 38px;
+  border-radius: 14px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
 }
 
 .architecture-flow strong,
@@ -924,6 +994,10 @@ a {
   .architecture-flow,
   .process-grid,
   .stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-grid {
     grid-template-columns: 1fr;
   }
 
