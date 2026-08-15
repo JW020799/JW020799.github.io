@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://JW020799.github.io/" />
     <meta name="theme-color" content="#242424" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css?v=20260816-home-polish" />
   </head>
   <body>
     <header class="hero" id="top">
@@ -39,9 +39,17 @@
         <h1>Jeon Jiwon</h1>
         <p class="hero__name">전지원</p>
         <p class="hero__desc">
-          FastAPI, RAG, Vector Search를 기반으로 AI 결과를 서비스 기준에 맞게 검증하고
-          백엔드 흐름으로 연결하는 개발자입니다.
+          AI 기능을 API, RAG, Vector Search 기반 서비스 흐름으로 구현하고,
+          검증 가능한 백엔드 구조로 연결합니다.
         </p>
+
+        <div class="hero__stack-cloud" aria-label="core stack">
+          <span>FastAPI</span>
+          <span>RAG</span>
+          <span>ChromaDB</span>
+          <span>Vector Search</span>
+          <span>Agent Workflow</span>
+        </div>
 
         <div class="hero__icons" aria-label="channels">
           <a href="mailto:020799@naver.com" aria-label="email">✉</a>
@@ -154,20 +162,55 @@
 
           <div class="skill-board">
             <article>
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />
+              </div>
               <h3>Backend</h3>
-              <p>Python, FastAPI, REST API, SQLAlchemy, MySQL</p>
+              <div class="skill-badges">
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />Python</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" />FastAPI</span>
+                <span><b>REST</b>REST API</span>
+                <span><img src="https://api.iconify.design/simple-icons:sqlalchemy.svg?color=%23d71f00" alt="" />SQLAlchemy</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />MySQL</span>
+              </div>
             </article>
             <article>
+              <div class="skill-icon">
+                <img src="assets/icons/langchain.svg" alt="" />
+              </div>
               <h3>AI / RAG</h3>
-              <p>LangChain, LangGraph, ChromaDB, Sentence-Transformers, OpenAI API</p>
+              <div class="skill-badges">
+                <span><img src="https://api.iconify.design/simple-icons:langchain.svg?color=%231c3f3a" alt="" />LangChain</span>
+                <span><b>LG</b>LangGraph</span>
+                <span><b>DB</b>ChromaDB</span>
+                <span><img src="https://api.iconify.design/simple-icons:huggingface.svg?color=%23ffbf26" alt="" />Sentence-Transformers</span>
+                <span><img src="assets/icons/openai-logo.svg" alt="" />OpenAI API</span>
+              </div>
             </article>
             <article>
+              <div class="skill-icon">
+                <img src="https://api.iconify.design/simple-icons:huggingface.svg?color=%23ffbf26" alt="" />
+              </div>
               <h3>Vector Search</h3>
-              <p>Ko-SRoBERTa, Nomic Embed Vision, Cosine Similarity, Threshold 설계</p>
+              <div class="skill-badges">
+                <span><b>KR</b>Ko-SRoBERTa</span>
+                <span><b>NV</b>Nomic Embed Vision</span>
+                <span><b>COS</b>Cosine Similarity</span>
+                <span><b>TH</b>Threshold 설계</span>
+              </div>
             </article>
             <article>
+              <div class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />
+              </div>
               <h3>Infra / Collaboration</h3>
-              <p>Docker, GitHub, GitHub Actions, AWS 구조 이해, Monday</p>
+              <div class="skill-badges">
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />Docker</span>
+                <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" />GitHub</span>
+                <span><img src="https://api.iconify.design/simple-icons:githubactions.svg?color=%232088ff" alt="" />GitHub Actions</span>
+                <span><img src="https://api.iconify.design/simple-icons:amazonaws.svg?color=%23ff9900" alt="" />AWS 구조 이해</span>
+                <span><b>MO</b>Monday</span>
+              </div>
             </article>
           </div>
         </div>
@@ -181,7 +224,7 @@
           </div>
 
           <div class="project-timeline">
-            <article class="feature-project">
+            <article class="feature-project feature-project--primary">
               <div class="project-point"></div>
               <div class="project-main">
                 <span class="project-category">AI Service</span>
@@ -238,15 +281,15 @@
                 <h3>GIUT</h3>
                 <p>
                   공공데이터와 OpenAI API를 활용해 지역 행사 정보를 탐색하고 추천 코스를 제공하는
-                  풀스택 팀 프로젝트입니다.
+                  지역 축제 탐색 웹 서비스입니다.
                 </p>
                 <div class="tag-row">
-                  <span>FastAPI</span><span>MySQL</span><span>OpenAI API</span><span>Public Data</span>
+                  <span>FastAPI</span><span>JWT</span><span>TourAPI</span><span>OpenAI GPT</span><span>MySQL</span>
                 </div>
                 <ul>
-                  <li>회원가입/로그인 API 구현</li>
-                  <li>행사 검색 및 필터링 API 구현</li>
-                  <li>공공데이터 API와 OpenAI API 연동 흐름 경험</li>
+                  <li>JWT + HttpOnly Cookie 기반 회원가입/로그인 API 구현</li>
+                  <li>TourAPI 기반 축제 조회와 검색/필터링 흐름 구현</li>
+                  <li>GPT 추천 코스 저장 및 마이페이지 조회 흐름 이해</li>
                 </ul>
                 <div class="project-links">
                   <a href="projects/giut/">자세히 보기</a>

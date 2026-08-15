@@ -157,6 +157,29 @@ a {
   margin-top: 32px;
 }
 
+.hero__stack-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: min(680px, 100%);
+  margin-top: 30px;
+}
+
+.hero__stack-cloud span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 13px;
+  border: 1px solid rgba(139, 185, 255, 0.26);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 13px;
+  font-weight: 900;
+  backdrop-filter: blur(10px);
+}
+
 .hero__icons a {
   display: grid;
   place-items: center;
@@ -377,8 +400,92 @@ a {
 }
 
 .skill-board article {
+  position: relative;
+  overflow: hidden;
   min-height: 168px;
   padding: 34px;
+}
+
+.skill-board article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 88% 14%, rgba(39, 100, 216, 0.16), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 255, 0.94));
+  opacity: 1;
+}
+
+.skill-icon,
+.skill-board h3,
+.skill-badges {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 22px;
+  border: 1px solid #d8e4ef;
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 14px 30px rgba(26, 63, 103, 0.09);
+}
+
+.skill-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.skill-badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 7px 12px 7px 8px;
+  border: 1px solid #dbe7f3;
+  border-radius: 999px;
+  color: #223044;
+  background: rgba(255, 255, 255, 0.88);
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba(26, 63, 103, 0.06);
+}
+
+.skill-badges img,
+.skill-badges b {
+  display: inline-grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+}
+
+.skill-badges img {
+  padding: 4px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px #d7e4f1;
+  object-fit: contain;
+}
+
+.skill-badges b {
+  border-radius: 999px;
+  color: var(--white);
+  background: linear-gradient(135deg, #2764d8, #173f96);
+  font-size: 9px;
+  font-weight: 900;
 }
 
 .projects-section {
@@ -431,6 +538,34 @@ a {
   border-radius: 28px;
   background: var(--white);
   box-shadow: 0 22px 60px rgba(0, 0, 0, 0.06);
+}
+
+.feature-project--primary .project-point {
+  background: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue), 0 0 0 10px rgba(39, 100, 216, 0.1);
+}
+
+.feature-project--primary .project-main {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(39, 100, 216, 0.28);
+  background:
+    radial-gradient(circle at 88% 4%, rgba(39, 100, 216, 0.16), transparent 28%),
+    linear-gradient(145deg, #ffffff, #f7fbff);
+  box-shadow: 0 28px 72px rgba(39, 100, 216, 0.13);
+}
+
+.feature-project--primary .project-main::after {
+  content: "Representative Project";
+  position: absolute;
+  top: 24px;
+  right: 26px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: #1f56bc;
+  background: #edf4ff;
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .project-category {
@@ -1208,6 +1343,16 @@ a {
 
   .project-point {
     display: none;
+  }
+
+  .feature-project--primary .project-main {
+    padding-top: 70px;
+  }
+
+  .feature-project--primary .project-main::after {
+    top: 24px;
+    right: auto;
+    left: 28px;
   }
 
   .detail-hero__content,
