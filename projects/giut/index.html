@@ -6,7 +6,7 @@
     <title>GIUT | Jeon Jiwon Portfolio</title>
     <meta name="description" content="공공데이터와 OpenAI API 기반 지역 행사 추천 서비스 GIUT 상세 페이지" />
     <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css?v=20260816-project-detail" />
   </head>
   <body class="project-detail-body">
     <header class="detail-hero">
@@ -19,8 +19,8 @@
           <span class="detail-kicker">Team Project · Backend API · Public Data</span>
           <h1>GIUT</h1>
           <p>
-            한국관광공사 공공데이터와 OpenAI API를 활용해 지역 행사 탐색과 AI 추천 코스를 제공하는
-            풀스택 팀 프로젝트입니다.
+            한국관광공사 공공데이터를 기반으로 지역 행사 정보를 탐색하고, OpenAI API를 활용해
+            사용자 조건에 맞는 행사 코스를 추천하는 풀스택 팀 프로젝트입니다.
           </p>
           <div class="detail-actions">
             <a class="primary" href="https://github.com/Baikseungwoo/IBM-x-RedHat-Midterm-Project" target="_blank" rel="noopener">GitHub 보기</a>
@@ -30,52 +30,191 @@
         <aside class="detail-meta">
           <div><span>Period</span><strong>2026.05</strong></div>
           <div><span>Team</span><strong>Midterm Project</strong></div>
-          <div><span>Role</span><strong>Backend API / Frontend</strong></div>
-          <div><span>Stack</span><strong>FastAPI, MySQL, React</strong></div>
+          <div><span>Role</span><strong>Backend API / Service Flow</strong></div>
+          <div><span>Stack</span><strong>FastAPI, MySQL, React, Docker</strong></div>
         </aside>
       </div>
     </header>
 
     <main class="detail-main">
       <section class="detail-section">
-        <h2>Project Overview</h2>
+        <h2>프로젝트 개요</h2>
         <p>
-          GIUT는 사용자가 지역, 날짜, 관심사에 따라 행사를 탐색하고, OpenAI API 기반 추천 코스를 받을 수
-          있도록 만든 서비스입니다. 공공데이터를 서비스 데이터로 활용하고 Docker Compose와 AWS EC2로
-          실제 배포까지 진행했습니다.
+          여행이나 지역 행사를 찾을 때 사용자는 날짜, 지역, 관심사에 따라 여러 정보를 직접 비교해야 합니다.
+          GIUT는 이 과정을 줄이기 위해 공공 행사 데이터를 한곳에 모으고, 조건에 맞는 행사 탐색과
+          AI 추천 코스를 제공하도록 기획했습니다.
         </p>
       </section>
 
       <section class="detail-section">
-        <h2>My Role</h2>
+        <h2>서비스 흐름</h2>
+        <div class="architecture-flow">
+          <article>
+            <strong>1. 행사 데이터 수집</strong>
+            <p>한국관광공사 API에서 행사 정보를 가져와 서비스 데이터로 활용합니다.</p>
+          </article>
+          <article>
+            <strong>2. 검색 / 필터링</strong>
+            <p>지역, 날짜, 진행 상태, 키워드 조건으로 행사 목록을 조회합니다.</p>
+          </article>
+          <article>
+            <strong>3. AI 추천 요청</strong>
+            <p>사용자 조건을 바탕으로 OpenAI API를 호출해 추천 코스를 생성합니다.</p>
+          </article>
+          <article>
+            <strong>4. 저장 / 관리</strong>
+            <p>관심 행사, 북마크, 리뷰, 추천 코스를 사용자 기능과 연결합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>담당 구현 범위</h2>
         <div class="detail-grid">
           <ul class="detail-list">
             <li>FastAPI 기반 회원가입/로그인 API 구현</li>
             <li>행사 검색 및 필터링 API 구현</li>
             <li>사용자 프로필 조회 및 수정 흐름 구현</li>
+            <li>프론트엔드 화면 일부 구현 및 API 연동 흐름 확인</li>
           </ul>
           <ul class="detail-list">
-            <li>공공데이터 API와 서비스 데이터 흐름 이해</li>
-            <li>OpenAI API 기반 추천 기능 연동 흐름 경험</li>
-            <li>Docker Compose와 AWS EC2 배포 구조 학습</li>
+            <li>공공데이터 API를 서비스 데이터로 활용하는 흐름 학습</li>
+            <li>OpenAI API 기반 추천 기능 연동 구조 이해</li>
+            <li>Docker Compose 기반 통합 실행 환경 경험</li>
+            <li>AWS EC2 서버 배포 및 컨테이너 실행 상태 확인</li>
           </ul>
         </div>
       </section>
 
       <section class="detail-section">
-        <h2>Result</h2>
+        <h2>시스템 구조</h2>
+        <div class="process-grid">
+          <article>
+            <span>Frontend</span>
+            <h3>React</h3>
+            <p>행사 탐색, 상세 조회, 사용자 기능, AI 추천 요청 화면을 구성했습니다.</p>
+          </article>
+          <article>
+            <span>Backend</span>
+            <h3>FastAPI</h3>
+            <p>인증, 행사 검색, 사용자 데이터, 추천 요청 API를 처리합니다.</p>
+          </article>
+          <article>
+            <span>Database</span>
+            <h3>MySQL</h3>
+            <p>사용자, 행사 상호작용, 추천 코스 저장 데이터를 관리합니다.</p>
+          </article>
+          <article>
+            <span>External API</span>
+            <h3>Public Data / OpenAI / Map</h3>
+            <p>공공데이터, OpenAI API, Naver Map API를 서비스 기능에 연결했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>문제 해결 과정</h2>
+        <div class="solution-grid">
+          <article class="problem-card">
+            <div class="problem-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" />
+            </div>
+            <h3>API 역할 분리</h3>
+            <span>PROBLEM</span>
+            <p>행사 조회, 검색, 사용자 기능이 한 흐름에 섞이면 API 책임이 불명확해질 수 있었습니다.</p>
+            <span>SOLUTION</span>
+            <p>기능 단위로 라우터와 요청 흐름을 분리하고, 프론트엔드가 필요한 응답 형태를 기준으로 API를 정리했습니다.</p>
+          </article>
+          <article class="problem-card">
+            <div class="problem-icon">
+              <img src="../../assets/icons/openai-logo.svg" alt="" />
+            </div>
+            <h3>외부 API 연동</h3>
+            <span>PROBLEM</span>
+            <p>공공데이터, 지도, AI 추천처럼 서로 다른 외부 API를 하나의 서비스 흐름에 연결해야 했습니다.</p>
+            <span>SOLUTION</span>
+            <p>API별 입력과 출력 데이터를 분리해 이해하고, 사용자 요청에서 추천 결과까지 이어지는 흐름을 문서화했습니다.</p>
+          </article>
+          <article class="problem-card">
+            <div class="problem-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />
+            </div>
+            <h3>통합 실행 환경</h3>
+            <span>PROBLEM</span>
+            <p>프론트엔드, 백엔드, DB를 각자 실행하면 팀원이 같은 환경을 맞추기 어려웠습니다.</p>
+            <span>SOLUTION</span>
+            <p>Docker Compose로 컨테이너 실행 구조를 맞추고, EC2 환경에서 서비스 실행 흐름을 확인했습니다.</p>
+          </article>
+          <article class="problem-card">
+            <div class="problem-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />
+            </div>
+            <h3>서비스 데이터 연결</h3>
+            <span>PROBLEM</span>
+            <p>행사 데이터, 사용자 활동, 추천 코스가 따로 관리되면 서비스 경험이 끊길 수 있었습니다.</p>
+            <span>SOLUTION</span>
+            <p>검색, 저장, 리뷰, 추천 코스 조회가 이어지도록 사용자 중심의 데이터 흐름을 정리했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>프로젝트 결과</h2>
         <div class="result-grid">
           <article class="result-card">
             <strong>Backend API</strong>
-            <p>사용자 인증, 행사 조회, 검색/필터링 API를 구현하며 FastAPI 백엔드 흐름을 경험했습니다.</p>
+            <p>회원 기능, 행사 조회, 검색/필터링 API를 구현하며 FastAPI 백엔드 흐름을 경험했습니다.</p>
           </article>
           <article class="result-card">
-            <strong>External API</strong>
-            <p>공공데이터 API와 OpenAI API를 서비스 기능으로 연결하는 흐름을 학습했습니다.</p>
+            <strong>AI Recommendation</strong>
+            <p>OpenAI API를 서비스 추천 기능으로 연결하는 구조를 이해하고 구현 흐름을 정리했습니다.</p>
           </article>
           <article class="result-card">
-            <strong>Deployment</strong>
-            <p>Docker Compose 기반으로 프론트엔드, 백엔드, MySQL을 함께 실행하고 EC2 배포를 경험했습니다.</p>
+            <strong>Deployment Practice</strong>
+            <p>Docker Compose와 AWS EC2를 사용해 실제 웹 서비스 형태로 실행되는 구조를 경험했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>기술 스택</h2>
+        <div class="stack-grid">
+          <article>
+            <span class="stack-icon">API</span>
+            <h3>Backend</h3>
+            <div class="tech-badges">
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />Python</span>
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" />FastAPI</span>
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />MySQL</span>
+              <span><b>REST</b>REST API</span>
+            </div>
+          </article>
+          <article>
+            <span class="stack-icon">WEB</span>
+            <h3>Frontend</h3>
+            <div class="tech-badges">
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />React</span>
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />JavaScript</span>
+              <span><b>MAP</b>Naver Map API</span>
+            </div>
+          </article>
+          <article>
+            <span class="stack-icon">AI</span>
+            <h3>AI / External API</h3>
+            <div class="tech-badges">
+              <span><img src="../../assets/icons/openai-logo.svg" alt="" />OpenAI API</span>
+              <span><b>DATA</b>한국관광공사 API</span>
+              <span><b>REC</b>추천 코스</span>
+            </div>
+          </article>
+          <article>
+            <span class="stack-icon">OPS</span>
+            <h3>Infra / Collaboration</h3>
+            <div class="tech-badges">
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />Docker Compose</span>
+              <span><img src="https://api.iconify.design/simple-icons:amazonaws.svg?color=%23ff9900" alt="" />AWS EC2</span>
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" />GitHub Branch/PR</span>
+            </div>
           </article>
         </div>
       </section>

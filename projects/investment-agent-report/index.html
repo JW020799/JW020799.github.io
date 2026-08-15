@@ -6,7 +6,7 @@
     <title>Investment Agent Report | Jeon Jiwon Portfolio</title>
     <meta name="description" content="RAG와 Agent Workflow 기반 개인 투자 리포트 프로젝트 상세 페이지" />
     <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css?v=20260816-project-detail" />
   </head>
   <body class="project-detail-body">
     <header class="detail-hero">
@@ -16,11 +16,11 @@
       </nav>
       <div class="detail-hero__content">
         <div>
-          <span class="detail-kicker">Personal Project · RAG · Agent</span>
+          <span class="detail-kicker">Personal Project · RAG · Agent Workflow</span>
           <h1>Investment Agent Report</h1>
           <p>
-            기업 뉴스와 재무 데이터를 수집하고, RAG 검색과 Agent Workflow를 통해 투자 참고 리포트를
-            생성하는 개인 프로젝트입니다.
+            기업 뉴스와 재무 데이터를 수집하고, ChromaDB 기반 RAG 검색과 역할별 Agent Workflow를 통해
+            개인 투자 참고 리포트를 생성하는 데모 프로젝트입니다.
           </p>
           <div class="detail-actions">
             <a class="primary" href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">GitHub 보기</a>
@@ -37,45 +37,184 @@
 
     <main class="detail-main">
       <section class="detail-section">
-        <h2>Project Overview</h2>
+        <h2>프로젝트 개요</h2>
         <p>
-          이 프로젝트는 뉴스 수집, 재무 데이터 수집, 임베딩, 벡터 검색, Agent 역할 분리, 리포트 생성까지
-          AI 서비스의 전체 흐름을 작게 구현해보기 위해 만든 데모입니다.
+          이 프로젝트는 실제 투자 판단용 서비스가 아니라, AI 서비스 백엔드에서 자주 쓰이는 데이터 수집,
+          임베딩, 벡터 검색, 에이전트 역할 분리, 리포트 생성 흐름을 한 번에 연결해보기 위한 개인 데모입니다.
+          외부 데이터를 가져오고, 검색 가능한 지식으로 저장한 뒤, 역할별 로직을 조합해 결과를 만드는 데 집중했습니다.
         </p>
       </section>
 
       <section class="detail-section">
-        <h2>Implemented Features</h2>
+        <h2>서비스 흐름</h2>
+        <div class="architecture-flow">
+          <article>
+            <strong>1. 사용자 입력</strong>
+            <p>사용자가 기업 티커와 분석 요청을 입력하면 전체 리포트 생성 흐름이 시작됩니다.</p>
+          </article>
+          <article>
+            <strong>2. 데이터 수집</strong>
+            <p>Google News RSS와 yfinance를 통해 뉴스와 재무 데이터를 수집합니다.</p>
+          </article>
+          <article>
+            <strong>3. RAG 검색</strong>
+            <p>뉴스 문서를 임베딩해 ChromaDB에 저장하고, 질문과 관련 높은 문서를 검색합니다.</p>
+          </article>
+          <article>
+            <strong>4. Agent 리포트</strong>
+            <p>뉴스, 재무, 리스크, 최종 리포트 역할을 나누어 투자 참고 리포트를 생성합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>구현 기능</h2>
         <div class="detail-grid">
           <ul class="detail-list">
             <li>Google News RSS 기반 기업 뉴스 수집</li>
             <li>yfinance 기반 재무 데이터 수집 및 fallback 처리</li>
             <li>Sentence-Transformers 기반 문서 임베딩</li>
-            <li>ChromaDB 기반 벡터 저장 및 유사도 검색</li>
+            <li>ChromaDB 기반 벡터 저장 및 코사인 유사도 검색</li>
           </ul>
           <ul class="detail-list">
             <li>Planner, RAG, News, Finance, Risk, Report 역할 분리</li>
             <li>FastAPI API와 Streamlit 화면 구성</li>
-            <li>외부 데이터 호출 실패 시에도 리포트 흐름이 중단되지 않도록 예외 처리</li>
-            <li>GitHub 포트폴리오용 README 및 구조 정리</li>
+            <li>외부 데이터 호출 실패 시에도 흐름이 중단되지 않도록 예외 처리</li>
+            <li>GitHub 포트폴리오용 README, 구조, 실행 방법 정리</li>
           </ul>
         </div>
       </section>
 
       <section class="detail-section">
-        <h2>Technical Point</h2>
+        <h2>아키텍처</h2>
+        <div class="process-grid">
+          <article>
+            <span>UI</span>
+            <h3>Streamlit</h3>
+            <p>사용자가 기업 티커를 입력하고 리포트 결과를 확인하는 단일 화면을 구성했습니다.</p>
+          </article>
+          <article>
+            <span>API</span>
+            <h3>FastAPI</h3>
+            <p>리포트 생성 요청을 받고 데이터 수집, 검색, 에이전트 흐름을 호출합니다.</p>
+          </article>
+          <article>
+            <span>RAG</span>
+            <h3>ChromaDB</h3>
+            <p>뉴스 문서를 임베딩해 저장하고, 질문과 관련 있는 문서를 검색합니다.</p>
+          </article>
+          <article>
+            <span>Agent</span>
+            <h3>Role-based Workflow</h3>
+            <p>뉴스 요약, 재무 요약, 리스크 메모, 최종 리포트 생성을 역할별로 분리했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>문제 해결 과정</h2>
+        <div class="solution-grid">
+          <article class="problem-card">
+            <div class="problem-icon">
+              <img src="https://api.iconify.design/simple-icons:yahoo.svg?color=%236000d3" alt="" />
+            </div>
+            <h3>외부 API 제한 대응</h3>
+            <span>PROBLEM</span>
+            <p>yfinance 호출 중 429 Too Many Requests가 발생하면 전체 리포트 생성이 중단될 수 있었습니다.</p>
+            <span>SOLUTION</span>
+            <p>재무 데이터 수집 실패 시 기본값과 에러 메시지를 반환하도록 fallback을 적용해 서비스 흐름을 유지했습니다.</p>
+          </article>
+          <article class="problem-card">
+            <div class="problem-icon">
+              <img src="../../assets/icons/langchain.svg" alt="" />
+            </div>
+            <h3>뉴스 문서 검색</h3>
+            <span>PROBLEM</span>
+            <p>수집한 뉴스 전체를 그대로 리포트에 사용하면 관련성이 낮은 기사까지 섞일 수 있었습니다.</p>
+            <span>SOLUTION</span>
+            <p>뉴스를 임베딩해 ChromaDB에 저장하고, 코사인 유사도 기반 Top-K 검색으로 관련 문서만 사용했습니다.</p>
+          </article>
+          <article class="problem-card">
+            <div class="problem-icon">
+              <img src="../../assets/icons/openai-logo.svg" alt="" />
+            </div>
+            <h3>역할별 처리 분리</h3>
+            <span>PROBLEM</span>
+            <p>하나의 함수에서 뉴스, 재무, 리스크, 최종 리포트를 모두 처리하면 구조가 쉽게 복잡해졌습니다.</p>
+            <span>SOLUTION</span>
+            <p>Planner, RAG, News, Finance, Risk, Report 역할을 분리해 Agent Workflow 형태로 정리했습니다.</p>
+          </article>
+          <article class="problem-card">
+            <div class="problem-icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" />
+            </div>
+            <h3>검증 가능한 데모 구성</h3>
+            <span>PROBLEM</span>
+            <p>AI 프로젝트는 결과만 보여주면 내부 흐름을 확인하기 어렵습니다.</p>
+            <span>SOLUTION</span>
+            <p>FastAPI와 Streamlit을 함께 사용해 요청, 검색 결과, 리포트 생성 흐름을 빠르게 확인할 수 있게 구성했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>프로젝트 결과</h2>
         <div class="result-grid">
           <article class="result-card">
-            <strong>RAG Search</strong>
-            <p>뉴스 문서를 임베딩하고 코사인 유사도 기반으로 관련 문서를 검색했습니다.</p>
+            <strong>RAG Pipeline</strong>
+            <p>뉴스 수집, 임베딩, ChromaDB 저장, 유사도 검색까지 연결된 RAG 흐름을 구현했습니다.</p>
           </article>
           <article class="result-card">
             <strong>Agent Workflow</strong>
-            <p>하나의 LLM 호출이 아니라 역할별 처리 단계를 분리해 리포트 생성 흐름을 구성했습니다.</p>
+            <p>기능을 역할별 Agent로 나누어 리포트 생성 과정을 구조화했습니다.</p>
           </article>
           <article class="result-card">
             <strong>Service Demo</strong>
-            <p>Streamlit과 FastAPI를 함께 사용해 빠르게 검증 가능한 데모 형태로 구현했습니다.</p>
+            <p>FastAPI와 Streamlit 기반으로 로컬에서 바로 실행 가능한 AI 서비스 데모를 완성했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>기술 스택</h2>
+        <div class="stack-grid">
+          <article>
+            <span class="stack-icon">API</span>
+            <h3>Backend / UI</h3>
+            <div class="tech-badges">
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />Python</span>
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" />FastAPI</span>
+              <span><img src="https://api.iconify.design/simple-icons:streamlit.svg?color=%23ff4b4b" alt="" />Streamlit</span>
+            </div>
+          </article>
+          <article>
+            <span class="stack-icon">RAG</span>
+            <h3>Embedding / Vector DB</h3>
+            <div class="tech-badges">
+              <span><img src="https://api.iconify.design/simple-icons:huggingface.svg?color=%23ffbf26" alt="" />Sentence-Transformers</span>
+              <span><b>DB</b>ChromaDB</span>
+              <span><b>COS</b>Cosine Similarity</span>
+            </div>
+          </article>
+          <article>
+            <span class="stack-icon">DATA</span>
+            <h3>Data Source</h3>
+            <div class="tech-badges">
+              <span><b>RSS</b>Google News RSS</span>
+              <span><img src="https://api.iconify.design/simple-icons:yahoo.svg?color=%236000d3" alt="" />yfinance</span>
+              <span><b>JSON</b>Financial Data</span>
+            </div>
+          </article>
+          <article>
+            <span class="stack-icon">AGT</span>
+            <h3>Agent Workflow</h3>
+            <div class="tech-badges">
+              <span><b>PLAN</b>Planner</span>
+              <span><b>NEWS</b>News Agent</span>
+              <span><b>FIN</b>Finance Agent</span>
+              <span><b>RISK</b>Risk Agent</span>
+              <span><b>REP</b>Report Agent</span>
+            </div>
           </article>
         </div>
       </section>
