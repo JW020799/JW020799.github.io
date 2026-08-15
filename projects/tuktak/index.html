@@ -14,22 +14,23 @@
         <a href="../../">전지원 Portfolio</a>
         <a href="../../#projects">Projects</a>
       </nav>
+
       <div class="detail-hero__content">
         <div>
           <span class="detail-kicker">AI Service · RAG · Vector Search</span>
-          <h1>TUKTAK</h1>
+          <h1>TUKTAK AI</h1>
           <p>
-            수리 사진과 설명을 기반으로 AI 견적서, RAG 리스크 리포트, 시공자 역경매 매칭까지
-            연결하는 집수리 AI 서비스입니다.
+            사진과 설명을 기반으로 AI 견적서, RAG 리스크 리포트, 시공자 역경매 매칭까지 연결하는
+            집수리 AI 견적 및 매칭 플랫폼입니다.
           </p>
           <div class="detail-actions">
-            <a class="primary" href="../../assets/projects/tuktak-presentation.pdf" target="_blank" rel="noopener">발표자료 보기</a>
-            <a href="../../assets/projects/tuktak-presentation.pptx" download>PPT 다운로드</a>
+            <a class="primary" href="#presentation">발표자료 보기</a>
             <a href="#demo">시연영상 보기</a>
+            <a href="../../assets/projects/tuktak-presentation.pptx" download>PPT 다운로드</a>
             <a href="https://tuktakai.com" target="_blank" rel="noopener">서비스 보기</a>
-            <a href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">요약 Repo</a>
           </div>
         </div>
+
         <aside class="detail-meta">
           <div><span>Period</span><strong>2026.06 - 2026.08</strong></div>
           <div><span>Team</span><strong>Final Project</strong></div>
@@ -39,67 +40,178 @@
       </div>
     </header>
 
-    <main class="detail-main">
+    <main class="detail-main project-story">
       <section class="detail-section">
-        <h2>Project Overview</h2>
+        <h2>문제에서 서비스 흐름까지</h2>
         <p>
-          TUKTAK은 사용자가 수리 대상 사진과 자연어 설명을 입력하면 AI가 수리 요청을 구조화하고,
-          예상 견적과 리스크 리포트, 시공자 매칭까지 이어주는 서비스입니다. 단순 매칭이 아니라
-          사용자가 수리 전에 참고할 수 있는 가격 기준과 위험 요소를 함께 제공하는 데 초점을 두었습니다.
+          집수리는 사용자가 적정 가격, 추가 비용 가능성, 작업 범위, 시공자 신뢰도를 사전에 판단하기
+          어렵다는 문제가 있습니다. TUKTAK은 사용자가 사진과 설명을 입력하면 AI가 먼저 기준 견적과
+          리스크 정보를 제공하고, 이후 시공자 제안 비교까지 이어지는 흐름으로 정보 비대칭을 줄이는 것을
+          목표로 설계했습니다.
         </p>
       </section>
 
       <section class="detail-section">
-        <h2>My Role</h2>
+        <h2>서비스 · 배포 아키텍처</h2>
+        <p>
+          React 프론트엔드, FastAPI 메인 백엔드, AI Service, MySQL/RDS, ChromaDB, S3 이미지 저장소를
+          분리한 구조로 설계했습니다. 사용자는 프론트엔드에서 견적을 요청하고, 메인 백엔드는 서비스
+          데이터를 관리하며, AI Service는 견적 생성과 RAG 리스크 리포트 생성을 담당합니다.
+        </p>
+
+        <div class="architecture-flow" aria-label="service architecture">
+          <article>
+            <strong>User Flow</strong>
+            <p>사진과 설명 입력 → AI 견적 확인 → 리스크 리포트 확인 → 시공자 제안 비교</p>
+          </article>
+          <article>
+            <strong>Frontend</strong>
+            <p>React 기반으로 견적 요청, 리포트 조회, 매칭, 리뷰 흐름을 제공합니다.</p>
+          </article>
+          <article>
+            <strong>Main Backend</strong>
+            <p>FastAPI 기반으로 사용자, 견적, 리포트, 매칭, 리뷰 데이터를 관리합니다.</p>
+          </article>
+          <article>
+            <strong>AI Service</strong>
+            <p>LangGraph, ChromaDB, 임베딩 모델, LLM 연동 흐름을 별도 서버로 분리했습니다.</p>
+          </article>
+          <article>
+            <strong>Data Layer</strong>
+            <p>MySQL/RDS에 서비스 데이터를 저장하고, ChromaDB에 RAG 문서 벡터를 저장합니다.</p>
+          </article>
+          <article>
+            <strong>Deploy</strong>
+            <p>S3, CloudFront, ECR, ECS, RDS 기반의 AWS 배포 구조를 설계했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>설계와 구현 범위</h2>
+        <p>
+          저는 AI 백엔드와 리스크 리포트 흐름을 중심으로 구현 기준을 정리했습니다. 특히 RAG 문서 검색,
+          이미지 유사사례 검색 threshold, AI Service 연동 구조, Risk Report API 구조처럼 AI 결과가
+          실제 서비스 응답으로 이어지는 부분을 담당했습니다.
+        </p>
+
         <div class="detail-grid">
           <ul class="detail-list">
             <li>Risk Report 도메인 모델 및 API 구조 구현</li>
             <li>Main Backend와 AI Service 연동 구조 정리</li>
-            <li>ChromaDB 기반 RAG 문서 검색 흐름 설계 및 구현</li>
+            <li>ChromaDB 기반 RAG 검색 흐름 설계 및 구현</li>
             <li>RAG 검색 결과의 UNKNOWN / FAILED 예외 기준 정리</li>
           </ul>
           <ul class="detail-list">
             <li>이미지 유사사례 검색 threshold 설계</li>
-            <li>Nomic Embed Vision 기반 이미지 임베딩 검색 구조 검토</li>
-            <li>Ko-SRoBERTa 기반 문서 임베딩 모델 선정 검토</li>
-            <li>발표 자료 및 시연 영상 제작 참여</li>
+            <li>Nomic Embed Vision 이미지 임베딩 검색 구조 검토</li>
+            <li>Ko-SRoBERTa 기반 RAG 문서 임베딩 모델 선정 검토</li>
+            <li>발표자료 및 시연영상 제작</li>
           </ul>
         </div>
       </section>
 
       <section class="detail-section">
-        <h2>Architecture Focus</h2>
-        <div class="result-grid">
-          <article class="result-card">
-            <strong>AI Estimate</strong>
-            <p>사진과 설명을 구조화한 뒤 유사사례와 기준 데이터를 바탕으로 견적 흐름을 구성했습니다.</p>
+        <h2>AI 핵심 흐름</h2>
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>입력 유효성 검사</h3>
+            <p>사진 품질과 텍스트 유효성을 먼저 검사해 견적에 사용할 수 있는 입력인지 판단합니다.</p>
           </article>
-          <article class="result-card">
-            <strong>Risk Report RAG</strong>
-            <p>공공기관/소비자원/표준시방서 기반 문서를 임베딩해 리스크 근거 문서를 검색하도록 설계했습니다.</p>
+          <article>
+            <span>02</span>
+            <h3>NLP 구조화</h3>
+            <p>설명 텍스트에서 카테고리, 수리 대상, 문제 유형, 예상 작업, 부족 정보를 구조화합니다.</p>
           </article>
-          <article class="result-card">
-            <strong>Reverse Matching</strong>
-            <p>AI 견적서를 기준으로 시공자가 제안하고 사용자가 비교 선택하는 흐름으로 연결했습니다.</p>
+          <article>
+            <span>03</span>
+            <h3>유사 사례 검색</h3>
+            <p>이미지/텍스트 임베딩과 threshold 기준으로 기존 수리 사례를 검색합니다.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>견적 생성</h3>
+            <p>유사사례와 기준표를 우선 사용하고, 부족한 경우 LLM 기반 생성 흐름으로 보완합니다.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>RAG 리스크 리포트</h3>
+            <p>소비자원, 표준계약서, 시방서 등 근거 문서를 검색해 추가 비용과 주의사항을 정리합니다.</p>
           </article>
         </div>
       </section>
 
-      <section class="detail-section" id="presentation">
-        <h2>Resources</h2>
+      <section class="detail-section">
+        <h2>문제 해결 과정</h2>
+        <div class="result-grid">
+          <article class="result-card">
+            <strong>이미지 유사도 오답 통과</strong>
+            <p>단순 정확도보다 오답 통과를 더 위험하게 보고, 카테고리별 threshold를 보수적으로 설계했습니다.</p>
+          </article>
+          <article class="result-card">
+            <strong>RAG 검색 근거 부족</strong>
+            <p>근거 문서가 부족한 경우 LOW로 출력하지 않고 UNKNOWN/FAILED 처리하도록 기준을 정리했습니다.</p>
+          </article>
+          <article class="result-card">
+            <strong>문서 카테고리 편중</strong>
+            <p>PRICE, SAFETY, FIELD, EXTRA_COST 등 리스크 유형별 문서 보완 필요성을 도출했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>설계와 협업 산출물</h2>
+        <div class="result-grid">
+          <article class="result-card">
+            <strong>RAG 구현 테스트</strong>
+            <p>리스크 유형별 문서 검색, Top-K, threshold, FAILED 기준을 검증했습니다.</p>
+          </article>
+          <article class="result-card">
+            <strong>이미지 Threshold 설계</strong>
+            <p>이미지 유사사례 검색에서 오답 통과를 줄이기 위한 모델/유사도 방식 비교를 진행했습니다.</p>
+          </article>
+          <article class="result-card">
+            <strong>서비스 시연 자료</strong>
+            <p>사용자와 시공자의 실제 서비스 흐름을 보여주는 발표자료와 시연영상을 제작했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>프로젝트 결과</h2>
+        <p>
+          TUKTAK은 AI 견적, RAG 리스크 리포트, 역경매 매칭, 시연 가능한 웹 서비스 흐름까지 연결했습니다.
+          이 과정에서 AI 모델 자체보다 더 중요한 것은 모델 결과를 서비스 기준으로 검증하고, 근거 부족과
+          오답 통과를 어떻게 제어할지라는 점을 확인했습니다.
+        </p>
+      </section>
+
+      <section class="detail-section">
+        <h2>기술 스택</h2>
+        <div class="stack-grid">
+          <article>
+            <h3>AI / RAG</h3>
+            <p>LangGraph, LangChain, ChromaDB, Ko-SRoBERTa, Nomic Embed Vision</p>
+          </article>
+          <article>
+            <h3>Backend / Data</h3>
+            <p>Python, FastAPI, SQLAlchemy, MySQL, REST API</p>
+          </article>
+          <article>
+            <h3>Cloud / DevOps</h3>
+            <p>AWS S3, CloudFront, ECR, ECS, RDS, Docker, GitHub Actions</p>
+          </article>
+          <article>
+            <h3>Planning / Collaboration</h3>
+            <p>GitHub Branch/PR, API 명세서, ERD, 발표자료, 시연영상</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section" id="resources">
+        <h2>설계 · 검증 자료</h2>
         <div class="resource-grid">
-          <a class="resource-card" href="../../assets/projects/tuktak-presentation.pdf" target="_blank" rel="noopener">
-            <strong>발표자료 PDF</strong>
-            <span>TUKTAK 최종 발표자료</span>
-          </a>
-          <a class="resource-card" href="../../assets/projects/tuktak-presentation.pptx" download>
-            <strong>발표자료 PPT</strong>
-            <span>수정 가능한 PPT 원본 파일</span>
-          </a>
-          <a class="resource-card" href="#demo">
-            <strong>시연영상</strong>
-            <span>서비스 흐름 데모 영상</span>
-          </a>
           <a class="resource-card" href="../../assets/projects/tuktak-rag-report.pdf" target="_blank" rel="noopener">
             <strong>RAG 구현 테스트 보고서</strong>
             <span>리스크 리포트 RAG 검색 흐름 검증</span>
@@ -108,19 +220,39 @@
             <strong>이미지 Threshold 보고서</strong>
             <span>이미지 유사사례 검색 기준 설계</span>
           </a>
+          <a class="resource-card" href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">
+            <strong>프로젝트 요약 Repo</strong>
+            <span>AI 백엔드와 RAG 구현 요약</span>
+          </a>
         </div>
       </section>
 
       <section class="detail-section" id="demo">
-        <h2>Demo Video</h2>
+        <h2>TukTak 서비스 데모</h2>
         <p>
-          사용자가 AI 견적을 요청하고 리스크 리포트와 시공자 매칭 흐름으로 이어지는 주요 서비스 동선을
-          시연 영상으로 정리했습니다.
+          AI 견적 요청부터 리스크 리포트 확인, 시공자 매칭 흐름까지 서비스의 핵심 동선을 시연 영상으로
+          정리했습니다.
         </p>
         <video class="demo-video" controls preload="metadata">
           <source src="../../assets/projects/tuktak-demo.mp4" type="video/mp4" />
           브라우저가 비디오 재생을 지원하지 않습니다.
         </video>
+      </section>
+
+      <section class="detail-section" id="presentation">
+        <h2>발표자료</h2>
+        <p>프로젝트 요약을 먼저 확인한 뒤, 발표자료에서 전체 흐름과 화면을 함께 볼 수 있습니다.</p>
+        <div class="detail-actions">
+          <a class="primary" href="../../assets/projects/tuktak-presentation.pdf" target="_blank" rel="noopener">PDF 보기</a>
+          <a href="../../assets/projects/tuktak-presentation.pptx" download>PPT 다운로드</a>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>발표자료 미리보기</h2>
+        <div class="pdf-frame">
+          <iframe src="../../assets/projects/tuktak-presentation.pdf" title="TUKTAK 발표자료 PDF 미리보기"></iframe>
+        </div>
       </section>
     </main>
 
