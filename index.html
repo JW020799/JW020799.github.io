@@ -46,6 +46,12 @@
             Python/FastAPI 기반 API 구현과 RAG, Vector Search, ChromaDB 검색 흐름을
             서비스 구조 안에서 설계하고 검증하는 개발자를 지향합니다.
           </p>
+          <div class="hero__badges" aria-label="core keywords">
+            <span>FastAPI Backend</span>
+            <span>RAG Pipeline</span>
+            <span>Vector Search</span>
+            <span>Troubleshooting</span>
+          </div>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#projects">프로젝트 보기</a>
             <a class="btn btn--ghost" href="https://github.com/JW020799" target="_blank" rel="noopener">
@@ -58,6 +64,12 @@
           <div class="profile-mark">JJ</div>
           <h2>Jeon Jiwon</h2>
           <p>AI 서비스 백엔드 / Python FastAPI / RAG & Vector Search</p>
+          <div class="hero__metric">
+            <strong>3</strong>
+            <span>대표 프로젝트</span>
+            <strong>2</strong>
+            <span>RAG 기반 경험</span>
+          </div>
           <dl>
             <div>
               <dt>Focus</dt>
@@ -106,6 +118,11 @@
               <h3>Evaluation Criteria</h3>
               <p>정확도뿐 아니라 오답 통과율, 근거 부족, 실패 분기 기준을 함께 검토합니다.</p>
             </article>
+            <article>
+              <span>04</span>
+              <h3>Troubleshooting</h3>
+              <p>외부 API 실패, 부정확한 근거 문서, 근거 부족 케이스처럼 운영형 오류를 확인합니다.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -140,19 +157,27 @@
           <div class="skills-grid">
             <article>
               <h3>Backend</h3>
-              <p>Python, FastAPI, REST API, SQLAlchemy, MySQL</p>
+              <div class="tag-list">
+                <span>Python</span><span>FastAPI</span><span>REST API</span><span>SQLAlchemy</span><span>MySQL</span>
+              </div>
             </article>
             <article>
               <h3>AI / RAG</h3>
-              <p>LangChain, LangGraph, ChromaDB, Sentence-Transformers, OpenAI API</p>
+              <div class="tag-list">
+                <span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>Sentence-Transformers</span><span>OpenAI API</span>
+              </div>
             </article>
             <article>
               <h3>Vector Search</h3>
-              <p>Ko-SRoBERTa, Nomic Embed Vision, Cosine Similarity, Threshold 설계</p>
+              <div class="tag-list">
+                <span>Ko-SRoBERTa</span><span>Nomic Embed Vision</span><span>Cosine Similarity</span><span>Threshold</span>
+              </div>
             </article>
             <article>
               <h3>Infra / Collaboration</h3>
-              <p>Docker, GitHub, GitHub Actions, AWS 구조 이해, Monday</p>
+              <div class="tag-list">
+                <span>Docker</span><span>GitHub</span><span>GitHub Actions</span><span>AWS</span><span>Monday</span>
+              </div>
             </article>
           </div>
         </div>
@@ -168,40 +193,58 @@
 
           <div class="project-list">
             <article class="project-card project-card--featured">
-              <div class="project-card__meta">
-                <span>Team Project</span>
-                <span>2026.06 - 2026.08</span>
-              </div>
-              <h3>TUKTAK</h3>
-              <p class="project-card__subtitle">AI 기반 집수리 견적, RAG 리스크 리포트, 시공자 역경매 매칭 서비스</p>
-              <ul>
-                <li>Risk Report 도메인 모델 및 API 구조 구현</li>
-                <li>Ko-SRoBERTa + ChromaDB 기반 RAG 문서 검색 흐름 검증</li>
-                <li>이미지 유사사례 검색 모델 비교 및 threshold 기준 검토</li>
-                <li>근거 부족/오답 통과를 막기 위한 UNKNOWN/FAILED 예외 기준 정리</li>
-              </ul>
-              <div class="project-card__links">
-                <a href="https://tuktakai.com" target="_blank" rel="noopener">Service</a>
-                <a href="https://github.com/TUKTAKxAI" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">Summary</a>
+              <div class="project-card__grid">
+                <div>
+                  <div class="project-card__meta">
+                    <span>Team Project</span>
+                    <span>2026.06 - 2026.08</span>
+                  </div>
+                  <h3>TUKTAK</h3>
+                  <p class="project-card__subtitle">AI 기반 집수리 견적, RAG 리스크 리포트, 시공자 역경매 매칭 서비스</p>
+                  <ul>
+                    <li>Risk Report 도메인 모델 및 API 구조 구현</li>
+                    <li>Ko-SRoBERTa + ChromaDB 기반 RAG 문서 검색 흐름 검증</li>
+                    <li>이미지 유사사례 검색 모델 비교 및 threshold 기준 검토</li>
+                    <li>근거 부족/오답 통과를 막기 위한 UNKNOWN/FAILED 예외 기준 정리</li>
+                  </ul>
+                  <div class="project-card__links">
+                    <a href="https://tuktakai.com" target="_blank" rel="noopener">Service</a>
+                    <a href="https://github.com/TUKTAKxAI" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">Summary</a>
+                  </div>
+                </div>
+                <div class="project-side">
+                  <span class="project-side__num">01</span>
+                  <strong>AI Estimate → RAG Risk Report</strong>
+                  <p>AI 결과를 바로 보여주지 않고, 유사사례와 근거 문서 기준으로 검증하는 흐름을 확인했습니다.</p>
+                </div>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="project-card__meta">
-                <span>Personal Project</span>
-                <span>2026.08</span>
-              </div>
-              <h3>Investment Agent Report</h3>
-              <p class="project-card__subtitle">뉴스/재무 데이터 기반 RAG + Agent 투자 리포트 데모</p>
-              <ul>
-                <li>Google News RSS, yfinance 데이터 수집</li>
-                <li>Sentence-Transformers 임베딩과 ChromaDB 벡터 검색</li>
-                <li>LangGraph 기반 Planner, RAG, News, Finance, Risk, Report Agent Workflow 구성</li>
-                <li>FastAPI 리포트 API와 Streamlit 데모 화면 구현</li>
-              </ul>
-              <div class="project-card__links">
-                <a href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">GitHub</a>
+              <div class="project-card__grid">
+                <div>
+                  <div class="project-card__meta">
+                    <span>Personal Project</span>
+                    <span>2026.08</span>
+                  </div>
+                  <h3>Investment Agent Report</h3>
+                  <p class="project-card__subtitle">뉴스/재무 데이터 기반 RAG + Agent 투자 리포트 데모</p>
+                  <ul>
+                    <li>Google News RSS, yfinance 데이터 수집</li>
+                    <li>Sentence-Transformers 임베딩과 ChromaDB 벡터 검색</li>
+                    <li>LangGraph 기반 Planner, RAG, News, Finance, Risk, Report Agent Workflow 구성</li>
+                    <li>FastAPI 리포트 API와 Streamlit 데모 화면 구현</li>
+                  </ul>
+                  <div class="project-card__links">
+                    <a href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">GitHub</a>
+                  </div>
+                </div>
+                <div class="project-side project-side--light">
+                  <span class="project-side__num">02</span>
+                  <strong>RAG + Agent Workflow</strong>
+                  <p>데이터 수집, 임베딩, 검색, 리포트 생성을 하나의 동작 흐름으로 연결했습니다.</p>
+                </div>
               </div>
             </article>
 
