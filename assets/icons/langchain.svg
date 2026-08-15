@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="LangChain">
+  <rect width="96" height="96" rx="24" fill="#ffffff"/>
+  <path d="M33 62c-7 7-18 7-25 0s-7-18 0-25l12-12c7-7 18-7 25 0 4 4 6 9 6 14" fill="none" stroke="#163C3B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M63 34c7-7 18-7 25 0s7 18 0 25L76 71c-7 7-18 7-25 0-4-4-6-9-6-14" fill="none" stroke="#163C3B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M34 62l28-28" stroke="#163C3B" stroke-width="10" stroke-linecap="round"/>
+</svg>

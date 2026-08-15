@@ -152,21 +152,49 @@
 
       <section class="detail-section">
         <h2>문제 해결 과정</h2>
-        <div class="solution-grid">
-          <article class="solution-card">
-            <span class="solution-icon">!</span>
-            <strong>이미지 유사도 오답 통과</strong>
-            <p>단순 정확도보다 오답 통과를 더 위험하게 보고, 카테고리별 threshold를 보수적으로 설계했습니다.</p>
+        <div class="problem-grid">
+          <article class="problem-card problem-card--jira">
+            <div class="problem-icon">
+              <img src="../../assets/icons/jira.svg" alt="Jira" />
+            </div>
+            <h3>프로젝트 관리 방식 전환</h3>
+            <span class="problem-label">PROBLEM</span>
+            <p>Notion 기반 기록만으로는 일정, 산출물, 담당자, 작업 상태를 명확하게 추적하기 어려웠습니다.</p>
+            <span class="problem-label">SOLUTION</span>
+            <p>Jira를 도입해 Epic, Sprint, Task 단위로 작업을 쪼개고 우선순위와 진행 상태를 관리했습니다.</p>
           </article>
-          <article class="solution-card">
-            <span class="solution-icon">?</span>
-            <strong>RAG 검색 근거 부족</strong>
-            <p>근거 문서가 부족한 경우 LOW로 출력하지 않고 UNKNOWN/FAILED 처리하도록 기준을 정리했습니다.</p>
+
+          <article class="problem-card problem-card--hf">
+            <div class="problem-icon">
+              <img src="../../assets/icons/huggingface.svg" alt="Hugging Face" />
+            </div>
+            <h3>AI 모델 배포 과부하</h3>
+            <span class="problem-label">PROBLEM</span>
+            <p>Fine-tuning 모델을 직접 운영하는 경우 초기 인프라 비용과 운영 부담이 커질 수 있었습니다.</p>
+            <span class="problem-label">SOLUTION</span>
+            <p>Hugging Face repo를 활용해 모델 관리 방식을 정리하고, 초기 서비스는 GPT-5 mini와 외부 API 중심으로 검증하도록 설계했습니다.</p>
           </article>
-          <article class="solution-card">
-            <span class="solution-icon">#</span>
-            <strong>문서 카테고리 편중</strong>
-            <p>PRICE, SAFETY, FIELD, EXTRA_COST 등 리스크 유형별 문서 보완 필요성을 도출했습니다.</p>
+
+          <article class="problem-card problem-card--langchain">
+            <div class="problem-icon">
+              <img src="../../assets/icons/langchain.svg" alt="LangChain" />
+            </div>
+            <h3>RAG 검색 품질 저하</h3>
+            <span class="problem-label">PROBLEM</span>
+            <p>LangChain 기본 임베딩 모델 사용 시 한국어 리스크 문서 검색 결과가 부정확했습니다.</p>
+            <span class="problem-label">SOLUTION</span>
+            <p>임베딩 모델 성능평가를 직접 수행하고 Ko-SRoBERTa로 교체해 한국어 문서 검색 품질을 개선했습니다.</p>
+          </article>
+
+          <article class="problem-card problem-card--openai">
+            <div class="problem-icon">
+              <img src="../../assets/icons/openai.svg" alt="OpenAI" />
+            </div>
+            <h3>AI 견적 신뢰성</h3>
+            <span class="problem-label">PROBLEM</span>
+            <p>LLM 단독 추론은 임의 가격 생성과 JSON 형식 오류가 발생할 수 있었습니다.</p>
+            <span class="problem-label">SOLUTION</span>
+            <p>표준 단가표, 유사 사례 검색, 필수 Key 검증, 가격 범위 후처리를 함께 적용해 견적 응답 안정성을 높였습니다.</p>
           </article>
         </div>
       </section>
