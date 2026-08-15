@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GIUT | Jeon Jiwon Portfolio</title>
-    <meta name="description" content="공공데이터와 OpenAI API 기반 지역 행사 추천 서비스 GIUT 상세 페이지" />
+    <meta name="description" content="공공데이터와 GPT 기반 지역 축제 탐색 및 AI 추천 코스 서비스 GIUT 상세 페이지" />
     <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="../../assets/css/main.css?v=20260816-project-detail" />
+    <link rel="stylesheet" href="../../assets/css/main.css?v=20260816-giut-ppt" />
   </head>
   <body class="project-detail-body">
     <header class="detail-hero">
@@ -16,11 +16,11 @@
       </nav>
       <div class="detail-hero__content">
         <div>
-          <span class="detail-kicker">Team Project · Backend API · Public Data</span>
+          <span class="detail-kicker">Team Project · Public Data · GPT Recommendation</span>
           <h1>GIUT</h1>
           <p>
-            한국관광공사 공공데이터를 기반으로 지역 행사 정보를 탐색하고, OpenAI API를 활용해
-            사용자 조건에 맞는 행사 코스를 추천하는 풀스택 팀 프로젝트입니다.
+            전국 축제 정보를 기반으로 사용자가 원하는 행사를 탐색하고, GPT 기반 AI 추천 코스를 저장할 수
+            있도록 만든 지역 축제 탐색 웹 서비스입니다.
           </p>
           <div class="detail-actions">
             <a class="primary" href="https://github.com/Baikseungwoo/IBM-x-RedHat-Midterm-Project" target="_blank" rel="noopener">GitHub 보기</a>
@@ -29,9 +29,9 @@
         </div>
         <aside class="detail-meta">
           <div><span>Period</span><strong>2026.05</strong></div>
-          <div><span>Team</span><strong>Midterm Project</strong></div>
-          <div><span>Role</span><strong>Backend API / Service Flow</strong></div>
-          <div><span>Stack</span><strong>FastAPI, MySQL, React, Docker</strong></div>
+          <div><span>Team</span><strong>IBM x Red Hat Midterm</strong></div>
+          <div><span>Role</span><strong>Backend API / Auth / Service Flow</strong></div>
+          <div><span>Stack</span><strong>React, FastAPI, MySQL, OpenAI</strong></div>
         </aside>
       </div>
     </header>
@@ -40,30 +40,57 @@
       <section class="detail-section">
         <h2>프로젝트 개요</h2>
         <p>
-          여행이나 지역 행사를 찾을 때 사용자는 날짜, 지역, 관심사에 따라 여러 정보를 직접 비교해야 합니다.
-          GIUT는 이 과정을 줄이기 위해 공공 행사 데이터를 한곳에 모으고, 조건에 맞는 행사 탐색과
-          AI 추천 코스를 제공하도록 기획했습니다.
+          GIUT Festival Guide는 전국 축제 정보를 기반으로 사용자가 지역, 날짜, 키워드에 맞는 행사를
+          탐색하고, GPT 추천 코스를 저장한 뒤 마이페이지에서 다시 확인할 수 있도록 만든 웹 서비스입니다.
+          단순 행사 목록 조회를 넘어 사용자 액션, 추천 코스 저장, 문의와 관리자 답변까지 연결하는 흐름을
+          목표로 했습니다.
         </p>
       </section>
 
       <section class="detail-section">
-        <h2>서비스 흐름</h2>
+        <h2>핵심 기능</h2>
         <div class="architecture-flow">
           <article>
-            <strong>1. 행사 데이터 수집</strong>
-            <p>한국관광공사 API에서 행사 정보를 가져와 서비스 데이터로 활용합니다.</p>
+            <strong>TourAPI 축제 조회</strong>
+            <p>한국관광공사 TourAPI를 활용해 전국 축제 목록과 행사 상세 정보를 조회합니다.</p>
           </article>
           <article>
-            <strong>2. 검색 / 필터링</strong>
-            <p>지역, 날짜, 진행 상태, 키워드 조건으로 행사 목록을 조회합니다.</p>
+            <strong>검색 / 필터링</strong>
+            <p>지역, 날짜, 키워드 조건으로 사용자가 원하는 축제를 빠르게 찾을 수 있게 구성했습니다.</p>
           </article>
           <article>
-            <strong>3. AI 추천 요청</strong>
-            <p>사용자 조건을 바탕으로 OpenAI API를 호출해 추천 코스를 생성합니다.</p>
+            <strong>GPT 추천 코스</strong>
+            <p>지역, 날짜, 키워드 입력값을 바탕으로 조건에 맞는 추천 코스 3가지를 생성합니다.</p>
           </article>
           <article>
-            <strong>4. 저장 / 관리</strong>
-            <p>관심 행사, 북마크, 리뷰, 추천 코스를 사용자 기능과 연결합니다.</p>
+            <strong>저장 / 문의 / 알림</strong>
+            <p>좋아요, 북마크, 리뷰, 코스 저장, 문의 답변, 알림 조회까지 사용자 기능으로 연결했습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>사용자 흐름</h2>
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>메인 탐색</h3>
+            <p>사용자는 메인 화면에서 축제를 검색하고 필터를 적용합니다.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>행사 상세</h3>
+            <p>행사 상세 정보와 지도 위치를 확인하고 좋아요, 북마크, 리뷰를 남깁니다.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>AI 추천</h3>
+            <p>지역, 날짜, 키워드를 입력해 GPT 기반 추천 코스를 생성합니다.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>저장 / 재확인</h3>
+            <p>추천 코스를 저장하고 마이페이지에서 북마크와 저장 코스를 다시 확인합니다.</p>
           </article>
         </div>
       </section>
@@ -72,42 +99,42 @@
         <h2>담당 구현 범위</h2>
         <div class="detail-grid">
           <ul class="detail-list">
-            <li>FastAPI 기반 회원가입/로그인 API 구현</li>
-            <li>행사 검색 및 필터링 API 구현</li>
-            <li>사용자 프로필 조회 및 수정 흐름 구현</li>
-            <li>프론트엔드 화면 일부 구현 및 API 연동 흐름 확인</li>
+            <li>회원가입, 로그인, 로그아웃 API 구현</li>
+            <li>이메일 / 닉네임 중복 확인 API 구현</li>
+            <li>JWT access token / refresh token 기반 인증 흐름 구현</li>
+            <li>HttpOnly Cookie 기반 인증 응답 구조 적용</li>
           </ul>
           <ul class="detail-list">
-            <li>공공데이터 API를 서비스 데이터로 활용하는 흐름 학습</li>
-            <li>OpenAI API 기반 추천 기능 연동 구조 이해</li>
-            <li>Docker Compose 기반 통합 실행 환경 경험</li>
-            <li>AWS EC2 서버 배포 및 컨테이너 실행 상태 확인</li>
+            <li>사용자 정보 조회 및 수정 API 구현</li>
+            <li>마이페이지, 북마크, 저장 코스 조회 흐름 구현</li>
+            <li>행사 검색 / 필터링 API 흐름 구현</li>
+            <li>공공데이터 API와 GPT 추천 코스 기능의 서비스 흐름 이해 및 연동</li>
           </ul>
         </div>
       </section>
 
       <section class="detail-section">
-        <h2>시스템 구조</h2>
+        <h2>시스템 아키텍처</h2>
         <div class="process-grid">
           <article>
             <span>Frontend</span>
-            <h3>React</h3>
-            <p>행사 탐색, 상세 조회, 사용자 기능, AI 추천 요청 화면을 구성했습니다.</p>
+            <h3>React / Vite / Tailwind CSS</h3>
+            <p>사용자 화면에서 행사 탐색, 상세 조회, 추천 요청, 마이페이지 흐름을 제공합니다.</p>
           </article>
           <article>
             <span>Backend</span>
-            <h3>FastAPI</h3>
-            <p>인증, 행사 검색, 사용자 데이터, 추천 요청 API를 처리합니다.</p>
+            <h3>FastAPI / SQLAlchemy / Pydantic</h3>
+            <p>인증, 사용자 기능, 행사 데이터, 추천 요청 API를 처리합니다.</p>
           </article>
           <article>
             <span>Database</span>
             <h3>MySQL</h3>
-            <p>사용자, 행사 상호작용, 추천 코스 저장 데이터를 관리합니다.</p>
+            <p>사용자, refresh token, 행사 데이터, 북마크, 저장 코스, 문의와 알림 데이터를 저장합니다.</p>
           </article>
           <article>
             <span>External API</span>
-            <h3>Public Data / OpenAI / Map</h3>
-            <p>공공데이터, OpenAI API, Naver Map API를 서비스 기능에 연결했습니다.</p>
+            <h3>OpenAI / TourAPI / Naver Map</h3>
+            <p>GPT 추천, 한국관광공사 행사 데이터, 지도 위치 표시 기능을 외부 API로 연결했습니다.</p>
           </article>
         </div>
       </section>
@@ -117,43 +144,43 @@
         <div class="solution-grid">
           <article class="problem-card">
             <div class="problem-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" />
+              <img src="https://api.iconify.design/simple-icons:jsonwebtokens.svg?color=%23ffffff" alt="" />
             </div>
-            <h3>API 역할 분리</h3>
+            <h3>인증 상태 관리</h3>
             <span>PROBLEM</span>
-            <p>행사 조회, 검색, 사용자 기능이 한 흐름에 섞이면 API 책임이 불명확해질 수 있었습니다.</p>
+            <p>로그인 상태에 따라 마이페이지, 북마크, 코스 저장 같은 개인화 기능 접근을 제한해야 했습니다.</p>
             <span>SOLUTION</span>
-            <p>기능 단위로 라우터와 요청 흐름을 분리하고, 프론트엔드가 필요한 응답 형태를 기준으로 API를 정리했습니다.</p>
+            <p>access token과 refresh token을 분리하고, refresh token을 DB에 저장해 만료 시 재발급 흐름을 구성했습니다.</p>
           </article>
           <article class="problem-card">
             <div class="problem-icon">
-              <img src="../../assets/icons/openai-logo.svg" alt="" />
+              <img src="https://api.iconify.design/simple-icons:openai.svg?color=%23000000" alt="" />
             </div>
-            <h3>외부 API 연동</h3>
+            <h3>GPT 추천 결과 저장</h3>
             <span>PROBLEM</span>
-            <p>공공데이터, 지도, AI 추천처럼 서로 다른 외부 API를 하나의 서비스 흐름에 연결해야 했습니다.</p>
+            <p>AI 추천 결과가 일회성 응답으로 끝나면 사용자가 나중에 추천 코스를 다시 확인하기 어려웠습니다.</p>
             <span>SOLUTION</span>
-            <p>API별 입력과 출력 데이터를 분리해 이해하고, 사용자 요청에서 추천 결과까지 이어지는 흐름을 문서화했습니다.</p>
-          </article>
-          <article class="problem-card">
-            <div class="problem-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />
-            </div>
-            <h3>통합 실행 환경</h3>
-            <span>PROBLEM</span>
-            <p>프론트엔드, 백엔드, DB를 각자 실행하면 팀원이 같은 환경을 맞추기 어려웠습니다.</p>
-            <span>SOLUTION</span>
-            <p>Docker Compose로 컨테이너 실행 구조를 맞추고, EC2 환경에서 서비스 실행 흐름을 확인했습니다.</p>
+            <p>GPT가 생성한 추천 결과를 코스 단위로 저장하고, 마이페이지에서 저장 코스를 조회할 수 있게 연결했습니다.</p>
           </article>
           <article class="problem-card">
             <div class="problem-icon">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />
             </div>
-            <h3>서비스 데이터 연결</h3>
+            <h3>TourAPI 데이터 저장</h3>
             <span>PROBLEM</span>
-            <p>행사 데이터, 사용자 활동, 추천 코스가 따로 관리되면 서비스 경험이 끊길 수 있었습니다.</p>
+            <p>외부 API를 매번 직접 호출하면 응답 속도와 안정성, 데이터 활용 흐름이 흔들릴 수 있었습니다.</p>
             <span>SOLUTION</span>
-            <p>검색, 저장, 리뷰, 추천 코스 조회가 이어지도록 사용자 중심의 데이터 흐름을 정리했습니다.</p>
+            <p>백엔드 서버에서 TourAPI를 호출하고, 행사와 상세 데이터를 MySQL 테이블 구조에 맞게 저장하는 흐름을 정리했습니다.</p>
+          </article>
+          <article class="problem-card">
+            <div class="problem-icon">
+              <img src="https://api.iconify.design/simple-icons:naver.svg?color=%2303c75a" alt="" />
+            </div>
+            <h3>사용자 액션 연결</h3>
+            <span>PROBLEM</span>
+            <p>좋아요, 북마크, 리뷰, 문의, 알림이 각각 분리되면 서비스 이용 흐름이 끊길 수 있었습니다.</p>
+            <span>SOLUTION</span>
+            <p>사용자 ID를 기준으로 개인화 데이터를 연결하고, 문의 답변 시 알림 상태를 함께 관리하는 구조를 이해했습니다.</p>
           </article>
         </div>
       </section>
@@ -162,16 +189,16 @@
         <h2>프로젝트 결과</h2>
         <div class="result-grid">
           <article class="result-card">
-            <strong>Backend API</strong>
-            <p>회원 기능, 행사 조회, 검색/필터링 API를 구현하며 FastAPI 백엔드 흐름을 경험했습니다.</p>
+            <strong>Auth / User API</strong>
+            <p>JWT와 HttpOnly Cookie 기반 인증 흐름을 구현하고 개인화 기능의 기반을 만들었습니다.</p>
           </article>
           <article class="result-card">
-            <strong>AI Recommendation</strong>
-            <p>OpenAI API를 서비스 추천 기능으로 연결하는 구조를 이해하고 구현 흐름을 정리했습니다.</p>
+            <strong>Festival Data Flow</strong>
+            <p>TourAPI 행사 데이터 조회, 상세 정보, 검색과 필터링 흐름을 서비스 기능으로 연결했습니다.</p>
           </article>
           <article class="result-card">
-            <strong>Deployment Practice</strong>
-            <p>Docker Compose와 AWS EC2를 사용해 실제 웹 서비스 형태로 실행되는 구조를 경험했습니다.</p>
+            <strong>AI Course Recommendation</strong>
+            <p>GPT 추천 결과를 코스 단위로 생성하고 저장해 사용자가 다시 확인할 수 있는 구조를 만들었습니다.</p>
           </article>
         </div>
       </section>
@@ -180,42 +207,65 @@
         <h2>기술 스택</h2>
         <div class="stack-grid">
           <article>
+            <span class="stack-icon">WEB</span>
+            <h3>Frontend</h3>
+            <div class="tech-badges">
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />React</span>
+              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="" />Vite</span>
+              <span><img src="https://api.iconify.design/simple-icons:tailwindcss.svg?color=%2306b6d4" alt="" />Tailwind CSS</span>
+              <span><b>AX</b>Axios</span>
+            </div>
+          </article>
+          <article>
             <span class="stack-icon">API</span>
             <h3>Backend</h3>
             <div class="tech-badges">
               <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />Python</span>
               <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" />FastAPI</span>
+              <span><img src="https://api.iconify.design/simple-icons:sqlalchemy.svg?color=%23d71f00" alt="" />SQLAlchemy</span>
+              <span><b>PD</b>Pydantic</span>
+            </div>
+          </article>
+          <article>
+            <span class="stack-icon">DB</span>
+            <h3>Data / Auth</h3>
+            <div class="tech-badges">
               <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" />MySQL</span>
-              <span><b>REST</b>REST API</span>
+              <span><img src="https://api.iconify.design/simple-icons:jsonwebtokens.svg?color=%23000000" alt="" />JWT</span>
+              <span><b>CK</b>HttpOnly Cookie</span>
             </div>
           </article>
           <article>
-            <span class="stack-icon">WEB</span>
-            <h3>Frontend</h3>
+            <span class="stack-icon">EXT</span>
+            <h3>External API</h3>
             <div class="tech-badges">
-              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" />React</span>
-              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />JavaScript</span>
-              <span><b>MAP</b>Naver Map API</span>
+              <span><img src="../../assets/icons/openai-logo.svg" alt="" />OpenAI GPT</span>
+              <span><b>TOUR</b>한국관광공사 API</span>
+              <span><img src="https://api.iconify.design/simple-icons:naver.svg?color=%2303c75a" alt="" />Naver Map API</span>
             </div>
           </article>
-          <article>
-            <span class="stack-icon">AI</span>
-            <h3>AI / External API</h3>
-            <div class="tech-badges">
-              <span><img src="../../assets/icons/openai-logo.svg" alt="" />OpenAI API</span>
-              <span><b>DATA</b>한국관광공사 API</span>
-              <span><b>REC</b>추천 코스</span>
-            </div>
-          </article>
-          <article>
-            <span class="stack-icon">OPS</span>
-            <h3>Infra / Collaboration</h3>
-            <div class="tech-badges">
-              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />Docker Compose</span>
-              <span><img src="https://api.iconify.design/simple-icons:amazonaws.svg?color=%23ff9900" alt="" />AWS EC2</span>
-              <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" />GitHub Branch/PR</span>
-            </div>
-          </article>
+        </div>
+      </section>
+
+      <section class="detail-section" id="presentation">
+        <h2>발표자료</h2>
+        <p>GIUT 프로젝트의 서비스 문제 정의, 시스템 아키텍처, 백엔드와 프론트엔드 구현 내용을 정리한 발표자료입니다.</p>
+        <div class="detail-actions">
+          <a class="primary" href="../../assets/projects/giut-presentation.pdf" target="_blank" rel="noopener">PDF 보기</a>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>발표자료 미리보기</h2>
+        <p>슬라이드를 좌우로 드래그해서 GIUT 프로젝트 발표 흐름을 빠르게 확인할 수 있습니다.</p>
+        <div
+          class="slide-viewer"
+          data-slide-count="41"
+          data-slide-base="../../assets/projects/giut-slides/slide-"
+          data-slide-label="GIUT 발표자료"
+          aria-label="GIUT 발표자료 슬라이드 미리보기"
+        >
+          <div class="slide-track"></div>
         </div>
       </section>
     </main>
@@ -225,5 +275,6 @@
       <p>GIUT Project Detail</p>
       <a href="../../#projects">Back to Projects</a>
     </footer>
+    <script src="../../assets/js/main.js"></script>
   </body>
 </html>

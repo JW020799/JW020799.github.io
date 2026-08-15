@@ -38,6 +38,7 @@ document.querySelectorAll(".slide-viewer").forEach((viewer) => {
   const track = viewer.querySelector(".slide-track");
   const count = Number(viewer.dataset.slideCount || 0);
   const base = viewer.dataset.slideBase || "";
+  const labelName = viewer.dataset.slideLabel || "발표자료";
 
   if (!track || !count || !base) return;
 
@@ -50,7 +51,7 @@ document.querySelectorAll(".slide-viewer").forEach((viewer) => {
     const img = document.createElement("img");
     const number = String(index).padStart(2, "0");
     img.src = `${base}${number}.png`;
-    img.alt = `TUKTAK 발표자료 ${index}페이지`;
+    img.alt = `${labelName} ${index}페이지`;
     img.loading = index <= 3 ? "eager" : "lazy";
     img.draggable = false;
 
