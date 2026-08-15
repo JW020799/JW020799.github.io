@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investment Agent Report | Jeon Jiwon Portfolio</title>
+    <meta name="description" content="RAG와 Agent Workflow 기반 개인 투자 리포트 프로젝트 상세 페이지" />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+  </head>
+  <body class="project-detail-body">
+    <header class="detail-hero">
+      <nav class="detail-nav">
+        <a href="../../">전지원 Portfolio</a>
+        <a href="../../#projects">Projects</a>
+      </nav>
+      <div class="detail-hero__content">
+        <div>
+          <span class="detail-kicker">Personal Project · RAG · Agent</span>
+          <h1>Investment Agent Report</h1>
+          <p>
+            기업 뉴스와 재무 데이터를 수집하고, RAG 검색과 Agent Workflow를 통해 투자 참고 리포트를
+            생성하는 개인 프로젝트입니다.
+          </p>
+          <div class="detail-actions">
+            <a class="primary" href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">GitHub 보기</a>
+          </div>
+        </div>
+        <aside class="detail-meta">
+          <div><span>Period</span><strong>2026.08</strong></div>
+          <div><span>Type</span><strong>Personal Project</strong></div>
+          <div><span>Role</span><strong>Full Flow Implementation</strong></div>
+          <div><span>Stack</span><strong>FastAPI, Streamlit, ChromaDB</strong></div>
+        </aside>
+      </div>
+    </header>
+
+    <main class="detail-main">
+      <section class="detail-section">
+        <h2>Project Overview</h2>
+        <p>
+          이 프로젝트는 뉴스 수집, 재무 데이터 수집, 임베딩, 벡터 검색, Agent 역할 분리, 리포트 생성까지
+          AI 서비스의 전체 흐름을 작게 구현해보기 위해 만든 데모입니다.
+        </p>
+      </section>
+
+      <section class="detail-section">
+        <h2>Implemented Features</h2>
+        <div class="detail-grid">
+          <ul class="detail-list">
+            <li>Google News RSS 기반 기업 뉴스 수집</li>
+            <li>yfinance 기반 재무 데이터 수집 및 fallback 처리</li>
+            <li>Sentence-Transformers 기반 문서 임베딩</li>
+            <li>ChromaDB 기반 벡터 저장 및 유사도 검색</li>
+          </ul>
+          <ul class="detail-list">
+            <li>Planner, RAG, News, Finance, Risk, Report 역할 분리</li>
+            <li>FastAPI API와 Streamlit 화면 구성</li>
+            <li>외부 데이터 호출 실패 시에도 리포트 흐름이 중단되지 않도록 예외 처리</li>
+            <li>GitHub 포트폴리오용 README 및 구조 정리</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="detail-section">
+        <h2>Technical Point</h2>
+        <div class="result-grid">
+          <article class="result-card">
+            <strong>RAG Search</strong>
+            <p>뉴스 문서를 임베딩하고 코사인 유사도 기반으로 관련 문서를 검색했습니다.</p>
+          </article>
+          <article class="result-card">
+            <strong>Agent Workflow</strong>
+            <p>하나의 LLM 호출이 아니라 역할별 처리 단계를 분리해 리포트 생성 흐름을 구성했습니다.</p>
+          </article>
+          <article class="result-card">
+            <strong>Service Demo</strong>
+            <p>Streamlit과 FastAPI를 함께 사용해 빠르게 검증 가능한 데모 형태로 구현했습니다.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h2>THANK YOU</h2>
+      <p>Investment Agent Report Detail</p>
+      <a href="../../#projects">Back to Projects</a>
+    </footer>
+  </body>
+</html>
