@@ -372,6 +372,28 @@ a {
   padding: 30px;
 }
 
+.resume-card--bootcamp {
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid #2d7890;
+  background:
+    radial-gradient(circle at 96% 8%, rgba(45, 120, 144, 0.12), transparent 30%),
+    linear-gradient(135deg, #ffffff, #f6fbff);
+}
+
+.resume-card--bootcamp::before {
+  content: "Bootcamp";
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: #27677d;
+  background: #eaf6fa;
+  font-size: 12px;
+  font-weight: 900;
+}
+
 .resume-list time {
   display: block;
   margin-bottom: 8px;
@@ -388,6 +410,26 @@ a {
 .resume-list p {
   margin: 0;
   color: var(--muted);
+}
+
+.activity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 18px;
+}
+
+.activity-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 12px;
+  border: 1px solid #d8e7ee;
+  border-radius: 999px;
+  color: #27677d;
+  background: #eef8fb;
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .skill-board {
