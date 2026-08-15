@@ -10,303 +10,279 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Jeon Jiwon Portfolio" />
-    <meta
-      property="og:description"
-      content="AI 결과를 서비스 기준으로 검증하고 백엔드 흐름으로 연결하는 개발자"
-    />
+    <meta property="og:description" content="AI 결과를 서비스 기준으로 검증하고 백엔드 흐름으로 연결하는 개발자" />
     <meta property="og:url" content="https://JW020799.github.io/" />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="theme-color" content="#242424" />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
     <header class="hero" id="top">
-      <nav class="nav">
-        <a class="brand" href="#top">
-          <span class="brand__kr">전지원</span>
-          <span class="brand__type">Portfolio</span>
+      <nav class="site-nav">
+        <a class="site-brand" href="#top">
+          <span>전지원</span>
+          <em>Portfolio</em>
         </a>
-        <div class="nav__links">
+        <div class="site-nav__links">
           <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#activities">Training & Activities</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#troubleshooting">Troubleshooting</a>
-          <a href="#contact">Contact</a>
         </div>
       </nav>
 
-      <div class="hero__grid">
-        <div class="hero__content">
-          <p class="eyebrow">AI Service Backend Developer</p>
-          <h1>
-            AI 결과를<br />
-            서비스 기준으로 검증하고<br />
-            백엔드 흐름으로 연결합니다.
-          </h1>
-          <p class="hero__lead">
-            Python/FastAPI 기반 API 구현과 RAG, Vector Search, ChromaDB 검색 흐름을
-            서비스 구조 안에서 설계하고 검증하는 개발자를 지향합니다.
-          </p>
-          <div class="hero__badges" aria-label="core keywords">
-            <span>FastAPI Backend</span>
-            <span>RAG Pipeline</span>
-            <span>Vector Search</span>
-            <span>Troubleshooting</span>
-          </div>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#projects">프로젝트 보기</a>
-            <a class="btn btn--ghost" href="https://github.com/JW020799" target="_blank" rel="noopener">
-              GitHub
-            </a>
-          </div>
+      <div class="hero__center">
+        <div class="profile-photo" aria-label="profile">
+          <span>JJ</span>
+        </div>
+        <p class="hero__small">AI Service Backend Developer</p>
+        <h1>Jeon Jiwon</h1>
+        <p class="hero__name">전지원</p>
+        <p class="hero__desc">
+          FastAPI, RAG, Vector Search를 기반으로 AI 결과를 서비스 기준에 맞게 검증하고
+          백엔드 흐름으로 연결하는 개발자입니다.
+        </p>
+
+        <div class="hero__icons" aria-label="channels">
+          <a href="mailto:020799@naver.com" aria-label="email">✉</a>
+          <a href="https://github.com/JW020799" target="_blank" rel="noopener" aria-label="github">GH</a>
+          <a href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener" aria-label="project">PR</a>
         </div>
 
-        <aside class="hero__card" aria-label="profile summary">
-          <div class="profile-mark">JJ</div>
-          <h2>Jeon Jiwon</h2>
-          <p>AI 서비스 백엔드 / Python FastAPI / RAG & Vector Search</p>
-          <div class="hero__metric">
-            <strong>3</strong>
-            <span>대표 프로젝트</span>
-            <strong>2</strong>
-            <span>RAG 기반 경험</span>
+        <div class="hero__contact">
+          <div>
+            <strong>E-mail.</strong>
+            <a href="mailto:020799@naver.com">020799@naver.com</a>
           </div>
-          <dl>
-            <div>
-              <dt>Focus</dt>
-              <dd>AI Backend, RAG, API</dd>
-            </div>
-            <div>
-              <dt>Stack</dt>
-              <dd>FastAPI, ChromaDB, LangGraph</dd>
-            </div>
-            <div>
-              <dt>GitHub</dt>
-              <dd>github.com/JW020799</dd>
-            </div>
-          </dl>
-        </aside>
+          <div>
+            <strong>GitHub.</strong>
+            <a href="https://github.com/JW020799" target="_blank" rel="noopener">github.com/JW020799</a>
+          </div>
+          <div>
+            <strong>Portfolio.</strong>
+            <a href="https://JW020799.github.io">JW020799.github.io</a>
+          </div>
+        </div>
       </div>
-      <a class="scroll-down" href="#about" aria-label="scroll to about">↓</a>
+
+      <a class="down" href="#about" aria-label="scroll down">⌄</a>
     </header>
 
     <main>
-      <section class="section section--white" id="about">
-        <div class="section__inner">
+      <section class="page-section page-section--white" id="about">
+        <div class="section-inner">
           <div class="section-heading">
-            <p class="section-label">About Me</p>
-            <h2>모델 호출보다 중요한 것은 서비스 기준이라고 생각합니다.</h2>
-            <p>
-              AI 기능은 정확한 결과를 내는 것뿐 아니라, 틀렸을 때 어떤 위험이 생기는지까지
-              설계되어야 한다고 생각합니다. 그래서 프로젝트에서 오답 통과, 근거 부족, 외부 API 실패처럼
-              실제 서비스에서 문제가 될 수 있는 조건을 먼저 정의하고 검증하는 데 집중했습니다.
+            <h2>ABOUT ME</h2>
+            <p class="section-subtitle">AI 기능을 서비스 백엔드로 연결하는 개발자</p>
+            <p class="section-lead">
+              AI 기능은 모델을 호출하는 것만으로 완성되지 않는다고 생각합니다. 사용자의 입력이 어떤 데이터로
+              변환되고, 검색 결과가 어떤 기준으로 검증되며, 실패 상황에서 어떻게 응답할지까지 설계되어야
+              실제 서비스에서 신뢰할 수 있습니다.
             </p>
           </div>
 
-          <div class="focus-grid">
+          <div class="about-grid">
             <article>
-              <span>01</span>
+              <div class="card-number">1</div>
               <h3>AI Service Backend</h3>
-              <p>FastAPI 기반 API와 AI Service 처리 흐름을 연결하고, 입력부터 결과 응답까지 구조화합니다.</p>
+              <div class="tag-row">
+                <span>FastAPI</span><span>REST API</span><span>Service Flow</span>
+              </div>
+              <p>
+                FastAPI 기반 API와 AI Service 처리 흐름을 연결하고, 입력 검증부터 결과 응답까지
+                서비스 구조로 정리합니다.
+              </p>
             </article>
             <article>
-              <span>02</span>
+              <div class="card-number">2</div>
               <h3>RAG & Vector Search</h3>
-              <p>임베딩, ChromaDB, Top-K, threshold, metadata filter 기반 검색 흐름을 설계합니다.</p>
+              <div class="tag-row">
+                <span>ChromaDB</span><span>Embedding</span><span>Top-K</span>
+              </div>
+              <p>
+                임베딩 모델, ChromaDB, metadata filter, threshold를 활용해 근거 문서와 유사사례 검색
+                흐름을 검증했습니다.
+              </p>
             </article>
             <article>
-              <span>03</span>
+              <div class="card-number">3</div>
               <h3>Evaluation Criteria</h3>
-              <p>정확도뿐 아니라 오답 통과율, 근거 부족, 실패 분기 기준을 함께 검토합니다.</p>
+              <div class="tag-row">
+                <span>Threshold</span><span>False Positive</span><span>FAILED</span>
+              </div>
+              <p>
+                단순 정확도보다 오답 통과, 근거 부족, 예외 분기처럼 사용자 판단에 영향을 주는 실패 조건을
+                먼저 확인했습니다.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-section page-section page-section--tint" id="education">
+        <div class="section-inner resume-layout">
+          <div class="section-heading section-heading--side">
+            <h2>Education</h2>
+            <p>전공과 교육 과정을 통해 웹 서비스 개발과 AI 서비스 흐름을 학습했습니다.</p>
+          </div>
+          <div class="resume-list">
+            <article>
+              <time>2026.02 - 2026.08</time>
+              <h3>IBM x Red Hat AI 부트캠프</h3>
+              <p>Python, FastAPI, React, MySQL, Docker, AWS 기반 웹 서비스 개발 흐름 학습</p>
             </article>
             <article>
-              <span>04</span>
-              <h3>Troubleshooting</h3>
-              <p>외부 API 실패, 부정확한 근거 문서, 근거 부족 케이스처럼 운영형 오류를 확인합니다.</p>
+              <time>2018.02 - 2021.02</time>
+              <h3>경민대학교 호텔관광경영과</h3>
+              <p>전문학사 졸업</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="education">
-        <div class="section__inner split">
-          <div>
-            <p class="section-label">Education & Training</p>
-            <h2>교육과 프로젝트를 통해 서비스 개발 흐름을 학습했습니다.</h2>
+      <section class="resume-section page-section page-section--white" id="activities">
+        <div class="section-inner resume-layout">
+          <div class="section-heading section-heading--side">
+            <h2>Training & Activities</h2>
+            <p>팀 프로젝트와 개인 프로젝트를 통해 AI 기능을 실제 서비스 흐름으로 연결했습니다.</p>
           </div>
-          <div class="timeline">
-            <div class="timeline__item">
-              <strong>IBM x Red Hat AI 부트캠프</strong>
-              <span>2026.02 - 2026.08</span>
-              <p>Python, FastAPI, React, MySQL, Docker, AWS 기반 웹 서비스 개발 흐름 학습</p>
-            </div>
-            <div class="timeline__item">
-              <strong>경민대학교 호텔관광경영과</strong>
-              <span>2018.02 - 2021.02</span>
-              <p>전문학사 졸업</p>
-            </div>
+          <div class="resume-list">
+            <article>
+              <time>2026.06 - 2026.08</time>
+              <h3>TUKTAK Final Project</h3>
+              <p>AI 견적, 이미지 유사사례 검색, ChromaDB 기반 RAG 리스크 리포트 흐름 검증</p>
+            </article>
+            <article>
+              <time>2026.08</time>
+              <h3>Investment Agent Report</h3>
+              <p>뉴스/재무 데이터 수집부터 RAG 검색, Agent Workflow, FastAPI API까지 개인 프로젝트로 구현</p>
+            </article>
+            <article>
+              <time>2026.05</time>
+              <h3>GIUT Midterm Project</h3>
+              <p>공공데이터 API와 OpenAI API를 활용한 지역 행사 탐색 및 추천 서비스 구현</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section section--white" id="skills">
-        <div class="section__inner">
+      <section class="resume-section page-section page-section--tint" id="skills">
+        <div class="section-inner">
           <div class="section-heading">
-            <p class="section-label">Skills</p>
-            <h2>AI 서비스 백엔드 구현에 필요한 기술을 중심으로 정리했습니다.</h2>
+            <h2>Skills</h2>
+            <p class="section-subtitle">프로젝트에서 실제 사용한 기술을 서비스 파트 기준으로 정리했습니다.</p>
           </div>
-          <div class="skills-grid">
+
+          <div class="skill-board">
             <article>
               <h3>Backend</h3>
-              <div class="tag-list">
-                <span>Python</span><span>FastAPI</span><span>REST API</span><span>SQLAlchemy</span><span>MySQL</span>
-              </div>
+              <p>Python, FastAPI, REST API, SQLAlchemy, MySQL</p>
             </article>
             <article>
               <h3>AI / RAG</h3>
-              <div class="tag-list">
-                <span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>Sentence-Transformers</span><span>OpenAI API</span>
-              </div>
+              <p>LangChain, LangGraph, ChromaDB, Sentence-Transformers, OpenAI API</p>
             </article>
             <article>
               <h3>Vector Search</h3>
-              <div class="tag-list">
-                <span>Ko-SRoBERTa</span><span>Nomic Embed Vision</span><span>Cosine Similarity</span><span>Threshold</span>
-              </div>
+              <p>Ko-SRoBERTa, Nomic Embed Vision, Cosine Similarity, Threshold 설계</p>
             </article>
             <article>
               <h3>Infra / Collaboration</h3>
-              <div class="tag-list">
-                <span>Docker</span><span>GitHub</span><span>GitHub Actions</span><span>AWS</span><span>Monday</span>
-              </div>
+              <p>Docker, GitHub, GitHub Actions, AWS 구조 이해, Monday</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="projects">
-        <div class="section__inner">
+      <section class="projects-section page-section page-section--white" id="projects">
+        <div class="section-inner">
           <div class="section-heading">
-            <p class="section-label">Projects</p>
-            <h2>대표 프로젝트</h2>
-            <p>AI 기능을 실제 서비스 흐름에 연결한 경험과, 개인 프로젝트로 구현한 RAG + Agent 흐름을 중심으로 구성했습니다.</p>
+            <h2>Feature Projects</h2>
+            <p class="section-subtitle">AI 서비스, RAG 검색, FastAPI 백엔드 구현 경험을 프로젝트 단위로 정리했습니다.</p>
           </div>
 
-          <div class="project-list">
-            <article class="project-card project-card--featured">
-              <div class="project-card__grid">
-                <div>
-                  <div class="project-card__meta">
-                    <span>Team Project</span>
-                    <span>2026.06 - 2026.08</span>
-                  </div>
-                  <h3>TUKTAK</h3>
-                  <p class="project-card__subtitle">AI 기반 집수리 견적, RAG 리스크 리포트, 시공자 역경매 매칭 서비스</p>
-                  <ul>
-                    <li>Risk Report 도메인 모델 및 API 구조 구현</li>
-                    <li>Ko-SRoBERTa + ChromaDB 기반 RAG 문서 검색 흐름 검증</li>
-                    <li>이미지 유사사례 검색 모델 비교 및 threshold 기준 검토</li>
-                    <li>근거 부족/오답 통과를 막기 위한 UNKNOWN/FAILED 예외 기준 정리</li>
-                  </ul>
-                  <div class="project-card__links">
-                    <a href="https://tuktakai.com" target="_blank" rel="noopener">Service</a>
-                    <a href="https://github.com/TUKTAKxAI" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">Summary</a>
-                  </div>
+          <div class="project-timeline">
+            <article class="feature-project">
+              <div class="project-point"></div>
+              <div class="project-main">
+                <span class="project-category">AI Service</span>
+                <h3>TUKTAK</h3>
+                <p>
+                  사용자가 수리 사진과 설명을 입력하면 AI 견적서, RAG 리스크 리포트, 시공자 역경매 매칭까지
+                  이어지는 집수리 AI 서비스입니다.
+                </p>
+                <div class="tag-row">
+                  <span>FastAPI</span><span>RAG</span><span>ChromaDB</span><span>LangGraph</span><span>Docker</span>
                 </div>
-                <div class="project-side">
-                  <span class="project-side__num">01</span>
-                  <strong>AI Estimate → RAG Risk Report</strong>
-                  <p>AI 결과를 바로 보여주지 않고, 유사사례와 근거 문서 기준으로 검증하는 흐름을 확인했습니다.</p>
+                <ul>
+                  <li>Risk Report 도메인 모델 및 API 구조 구현</li>
+                  <li>Ko-SRoBERTa + ChromaDB 기반 RAG 문서 검색 흐름 검증</li>
+                  <li>이미지 유사사례 검색 모델 비교 및 threshold 기준 검토</li>
+                  <li>UNKNOWN/FAILED 예외 기준 정리</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://tuktakai.com" target="_blank" rel="noopener">Service</a>
+                  <a href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">Summary</a>
                 </div>
               </div>
             </article>
 
-            <article class="project-card">
-              <div class="project-card__grid">
-                <div>
-                  <div class="project-card__meta">
-                    <span>Personal Project</span>
-                    <span>2026.08</span>
-                  </div>
-                  <h3>Investment Agent Report</h3>
-                  <p class="project-card__subtitle">뉴스/재무 데이터 기반 RAG + Agent 투자 리포트 데모</p>
-                  <ul>
-                    <li>Google News RSS, yfinance 데이터 수집</li>
-                    <li>Sentence-Transformers 임베딩과 ChromaDB 벡터 검색</li>
-                    <li>LangGraph 기반 Planner, RAG, News, Finance, Risk, Report Agent Workflow 구성</li>
-                    <li>FastAPI 리포트 API와 Streamlit 데모 화면 구현</li>
-                  </ul>
-                  <div class="project-card__links">
-                    <a href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">GitHub</a>
-                  </div>
+            <article class="feature-project">
+              <div class="project-point"></div>
+              <div class="project-main">
+                <span class="project-category">RAG + Agent</span>
+                <h3>Investment Agent Report</h3>
+                <p>
+                  기업 뉴스와 재무 데이터를 수집하고, RAG 검색과 LangGraph Agent Workflow를 통해 투자 참고
+                  리포트를 생성하는 개인 프로젝트입니다.
+                </p>
+                <div class="tag-row">
+                  <span>FastAPI</span><span>Streamlit</span><span>ChromaDB</span><span>LangGraph</span><span>yfinance</span>
                 </div>
-                <div class="project-side project-side--light">
-                  <span class="project-side__num">02</span>
-                  <strong>RAG + Agent Workflow</strong>
-                  <p>데이터 수집, 임베딩, 검색, 리포트 생성을 하나의 동작 흐름으로 연결했습니다.</p>
+                <ul>
+                  <li>Google News RSS, yfinance 기반 데이터 수집</li>
+                  <li>Sentence-Transformers 임베딩과 ChromaDB 벡터 검색</li>
+                  <li>Planner, RAG, News, Finance, Risk, Report Agent 구성</li>
+                  <li>외부 API 실패 상황에 대한 fallback 구조 적용</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
             </article>
 
-            <article class="project-card">
-              <div class="project-card__meta">
-                <span>Team Project</span>
-                <span>2026.05</span>
+            <article class="feature-project">
+              <div class="project-point"></div>
+              <div class="project-main">
+                <span class="project-category">Backend API</span>
+                <h3>GIUT</h3>
+                <p>
+                  공공데이터와 OpenAI API를 활용해 지역 행사 정보를 탐색하고 추천 코스를 제공하는
+                  풀스택 팀 프로젝트입니다.
+                </p>
+                <div class="tag-row">
+                  <span>FastAPI</span><span>MySQL</span><span>OpenAI API</span><span>Public Data</span>
+                </div>
+                <ul>
+                  <li>회원가입/로그인 API 구현</li>
+                  <li>행사 검색 및 필터링 API 구현</li>
+                  <li>공공데이터 API와 OpenAI API 연동 흐름 경험</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/Baikseungwoo/IBM-x-RedHat-Midterm-Project" target="_blank" rel="noopener">GitHub</a>
+                </div>
               </div>
-              <h3>GIUT</h3>
-              <p class="project-card__subtitle">공공데이터와 OpenAI API를 활용한 지역 행사 탐색 및 추천 코스 서비스</p>
-              <ul>
-                <li>FastAPI 기반 회원가입/로그인 API 구현</li>
-                <li>지역, 날짜, 키워드 기반 행사 검색 및 필터링 API 구현</li>
-                <li>MySQL, 공공데이터 API, OpenAI API 연동 경험</li>
-              </ul>
-              <div class="project-card__links">
-                <a href="https://github.com/Baikseungwoo/IBM-x-RedHat-Midterm-Project" target="_blank" rel="noopener">GitHub</a>
-              </div>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--white" id="troubleshooting">
-        <div class="section__inner">
-          <div class="section-heading">
-            <p class="section-label">Troubleshooting</p>
-            <h2>잘 되는 결과보다, 틀리면 위험한 조건을 먼저 확인했습니다.</h2>
-          </div>
-
-          <div class="trouble-grid">
-            <article>
-              <h3>RAG 근거 부족 처리</h3>
-              <p class="problem">문제: 일부 케이스에서 근거 문서가 부족해도 낮은 위험도로 출력될 가능성 확인</p>
-              <p>해결: UNKNOWN 3개 이상이면 FAILED 처리하도록 응답 기준을 정리했습니다.</p>
-            </article>
-            <article>
-              <h3>PRICE 문서 오탐 방지</h3>
-              <p class="problem">문제: 전체 통계 문서가 직접 가격 근거처럼 통과되는 케이스 확인</p>
-              <p>해결: STAT_DATA 문서를 직접 가격 근거에서 제외하고 평균 수리비 기준표 보강 대상으로 분리했습니다.</p>
-            </article>
-            <article>
-              <h3>외부 API 실패 대응</h3>
-              <p class="problem">문제: yfinance 호출 시 429 Too Many Requests로 재무 데이터 수집 실패</p>
-              <p>해결: 실패 상태를 명시적으로 반환하고 리포트 생성 흐름이 중단되지 않도록 fallback 구조를 적용했습니다.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact" id="contact">
-        <div class="section__inner contact__inner">
-          <p class="section-label">Contact</p>
-          <h2>AI 기능을 서비스로 연결하는 백엔드 개발자가 되겠습니다.</h2>
-          <div class="contact__links">
-            <a href="mailto:020799@naver.com">020799@naver.com</a>
-            <a href="https://github.com/JW020799" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">Portfolio Project</a>
           </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <h2>THANK YOU</h2>
+      <p>AI Service Backend Developer · Jeon Jiwon</p>
+      <a href="mailto:020799@naver.com">020799@naver.com</a>
+    </footer>
 
     <script src="assets/js/main.js"></script>
   </body>
