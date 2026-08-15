@@ -992,6 +992,57 @@ a {
   font-size: 15px;
 }
 
+.tech-badges {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.tech-badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 7px 12px 7px 8px;
+  border: 1px solid #d8e4ef;
+  border-radius: 999px;
+  color: #243044;
+  background: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(26, 63, 103, 0.06);
+}
+
+.tech-badges span::before {
+  content: attr(data-logo);
+  display: inline-grid;
+  place-items: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border-radius: 999px;
+  color: var(--white);
+  background: linear-gradient(135deg, #2764d8, #173f96);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.tech-badges span:nth-child(2n)::before {
+  background: linear-gradient(135deg, #0f9f8f, #0d6760);
+}
+
+.tech-badges span:nth-child(3n)::before {
+  background: linear-gradient(135deg, #ff9d2f, #d96912);
+}
+
+.tech-badges span:nth-child(4n)::before {
+  background: linear-gradient(135deg, #6d5dfc, #3d32b8);
+}
+
 .architecture-image {
   margin: 30px 0 0;
 }
