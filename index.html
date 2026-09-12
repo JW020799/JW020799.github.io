@@ -51,10 +51,15 @@
           <span>Agent Workflow</span>
         </div>
 
+        <div class="hero__cta">
+          <a class="primary" href="assets/jeonjiwon-resume.pdf" target="_blank" rel="noopener">이력서 PDF 보기</a>
+          <a class="ghost" href="#projects">프로젝트 보기</a>
+        </div>
+
         <div class="hero__icons" aria-label="channels">
           <a href="mailto:020799@naver.com" aria-label="email">✉</a>
           <a href="https://github.com/JW020799" target="_blank" rel="noopener" aria-label="github">GH</a>
-          <a href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener" aria-label="project">PR</a>
+          <a href="assets/jeonjiwon-resume.pdf" target="_blank" rel="noopener" aria-label="resume">CV</a>
         </div>
 
         <div class="hero__contact">
@@ -108,8 +113,8 @@
                 <span>ChromaDB</span><span>Embedding</span><span>Top-K</span>
               </div>
               <p>
-                임베딩 모델, ChromaDB, metadata filter, threshold를 활용해 근거 문서와 유사사례 검색
-                흐름을 검증했습니다.
+                임베딩 모델 4종을 비교하고 ChromaDB metadata filter와 카테고리별 threshold를 설계해 근거 문서 71개 기반 검색
+                흐름을 구현했습니다.
               </p>
             </article>
             <article>
@@ -131,11 +136,24 @@
         <div class="section-inner resume-layout">
           <div class="section-heading section-heading--side">
             <h2>Training & Activities</h2>
-            <p>IBM x Red Hat AI 부트캠프와 프로젝트를 통해 AI 기능을 실제 서비스 흐름으로 연결했습니다.</p>
+            <p>부트캠프와 프로젝트를 통해 AI 기능을 실제 서비스 흐름으로 연결했고, 현재 생성형 AI 심화 과정을 수강 중입니다.</p>
           </div>
           <div class="resume-list">
+            <article class="resume-card resume-card--ongoing">
+              <time>2026.08.23 - 2026.10.22</time>
+              <h3>심화 생성형 AI 활용 인재양성 부트캠프</h3>
+              <div class="activity-meta">
+                <span>교육 과정</span>
+                <span>생성형 AI 심화</span>
+                <span>수강 중</span>
+              </div>
+              <p>
+                생성형 AI 활용 심화 과정을 수강하며, 기성 모델을 가져다 쓰는 단계를 넘어
+                직접 학습시킨 모델을 서비스에 연결하는 방법을 익히고 있습니다.
+              </p>
+            </article>
             <article class="resume-card resume-card--bootcamp">
-              <time>2026</time>
+              <time>2026.02 - 2026.08</time>
               <h3>IBM x Red Hat AI Bootcamp</h3>
               <div class="activity-meta">
                 <span>교육 과정</span>
@@ -150,17 +168,17 @@
             <article>
               <time>2026.06 - 2026.08</time>
               <h3>TUKTAK Final Project</h3>
-              <p>AI 견적, 이미지 유사사례 검색, ChromaDB 기반 RAG 리스크 리포트 흐름 검증</p>
+              <p>AI 견적, 이미지 유사사례 검색, ChromaDB 기반 RAG 리스크 리포트 구현. 오답 통과 0개를 기준으로 threshold 설계</p>
             </article>
             <article>
               <time>2026.08</time>
               <h3>Investment Agent Report</h3>
-              <p>뉴스/재무 데이터 수집부터 RAG 검색, Agent Workflow, FastAPI API까지 개인 프로젝트로 구현</p>
+              <p>뉴스·재무 데이터 수집부터 RAG 검색, Agent 6개 워크플로우, FastAPI API까지 6일 만에 단독 구현</p>
             </article>
             <article>
               <time>2026.05</time>
               <h3>GIUT Midterm Project</h3>
-              <p>공공데이터 API와 OpenAI API를 활용한 지역 행사 탐색 및 추천 서비스 구현</p>
+              <p>공공데이터 API와 OpenAI API 기반 지역 행사 탐색 서비스 구현. Event 모델 컬럼 19개 → 10개 재설계</p>
             </article>
           </div>
         </div>
@@ -221,7 +239,7 @@
                 <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />Docker</span>
                 <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" />GitHub</span>
                 <span><img src="https://api.iconify.design/simple-icons:githubactions.svg?color=%232088ff" alt="" />GitHub Actions</span>
-                <span><img src="https://api.iconify.design/simple-icons:amazonaws.svg?color=%23ff9900" alt="" />AWS 구조 이해</span>
+                <span><img src="https://api.iconify.design/simple-icons:amazonaws.svg?color=%23ff9900" alt="" />AWS EC2 배포</span>
                 <span><b>MO</b>Monday</span>
               </div>
             </article>
@@ -250,14 +268,16 @@
                   <span>FastAPI</span><span>RAG</span><span>ChromaDB</span><span>LangGraph</span><span>Docker</span>
                 </div>
                 <ul>
-                  <li>Risk Report 도메인 모델 및 API 구조 구현</li>
-                  <li>Ko-SRoBERTa + ChromaDB 기반 RAG 문서 검색 흐름 검증</li>
-                  <li>이미지 유사사례 검색 모델 비교 및 threshold 기준 검토</li>
-                  <li>UNKNOWN/FAILED 예외 기준 정리</li>
+                  <li>Risk Report 도메인 모델 및 API 구조 구현 (Main Backend)</li>
+                  <li>Ko-SRoBERTa + ChromaDB 기반 RAG 문서 검색 설계 · 구현 (문서 71개, 리스크 유형별 threshold)</li>
+                  <li>이미지 임베딩 모델 4종 비교 후 카테고리별 threshold 설계 — <strong>오답 통과 0개</strong> 기준</li>
+                  <li>근거 부족 카테고리를 FAILED로 분리해 잘못된 위험도 노출 차단 (10개 중 9개 COMPLETED)</li>
+                  <li>수리 요청 구조화 모델 검증 — 정확도 86.4%, 요청당 0.014초</li>
                 </ul>
+                <p class="project-inside">상세 페이지: 배포 아키텍처 다이어그램 · 문제 해결 6건 · 시연 영상 · 발표자료 47장</p>
                 <div class="project-links">
-                  <a href="projects/tuktak/">자세히 보기</a>
-                  <a href="https://tuktakai.com" target="_blank" rel="noopener">Service</a>
+                  <a class="project-links__primary" href="projects/tuktak/">아키텍처 · 문제 해결 보기 →</a>
+                  <a href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
             </article>
@@ -275,13 +295,15 @@
                   <span>FastAPI</span><span>Streamlit</span><span>ChromaDB</span><span>LangGraph</span><span>yfinance</span>
                 </div>
                 <ul>
-                  <li>Google News RSS, yfinance 기반 데이터 수집</li>
-                  <li>Sentence-Transformers 임베딩과 ChromaDB 벡터 검색</li>
-                  <li>Planner, RAG, News, Finance, Risk, Report Agent 구성</li>
-                  <li>외부 API 실패 상황에 대한 fallback 구조 적용</li>
+                  <li>Google News RSS · yfinance 데이터 수집과 실패 처리 구현</li>
+                  <li>Sentence-Transformers 임베딩 + ChromaDB 벡터 검색 구조 구현</li>
+                  <li>LangGraph 기반 <strong>Agent 6개</strong> 워크플로우와 <strong>API 엔드포인트 4개</strong> 구현</li>
+                  <li>yfinance 429 오류 시 status: unavailable로 반환해 리포트 생성 유지</li>
+                  <li>수집부터 API까지 전체 흐름을 <strong>6일 만에 단독 구현</strong></li>
                 </ul>
+                <p class="project-inside">상세 페이지: Agent 워크플로우 아키텍처 · 문제 해결 4건 · API 명세</p>
                 <div class="project-links">
-                  <a href="projects/investment-agent-report/">자세히 보기</a>
+                  <a class="project-links__primary" href="projects/investment-agent-report/">아키텍처 · 문제 해결 보기 →</a>
                   <a href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
@@ -300,12 +322,14 @@
                   <span>FastAPI</span><span>JWT</span><span>TourAPI</span><span>OpenAI GPT</span><span>MySQL</span>
                 </div>
                 <ul>
-                  <li>JWT + HttpOnly Cookie 기반 회원가입/로그인 API 구현</li>
-                  <li>TourAPI 기반 축제 조회와 검색/필터링 흐름 구현</li>
-                  <li>GPT 추천 코스 저장 및 마이페이지 조회 흐름 이해</li>
+                  <li>JWT + HttpOnly Cookie 기반 회원가입 / 로그인 API 구현</li>
+                  <li>TourAPI 기반 축제 조회와 검색 · 필터링 API 구현</li>
+                  <li>GPT 추천 코스 저장 및 마이페이지 조회 API 구현</li>
+                  <li>Event 모델을 서비스 요구 기준으로 재설계 — <strong>컬럼 19개 → 10개</strong></li>
                 </ul>
+                <p class="project-inside">상세 페이지: 시스템 아키텍처 · 문제 해결 4건 · 발표자료 41장</p>
                 <div class="project-links">
-                  <a href="projects/giut/">자세히 보기</a>
+                  <a class="project-links__primary" href="projects/giut/">아키텍처 · 문제 해결 보기 →</a>
                   <a href="https://github.com/Baikseungwoo/IBM-x-RedHat-Midterm-Project" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>

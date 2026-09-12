@@ -157,6 +157,38 @@ a {
   margin-top: 32px;
 }
 
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero__cta a {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 900;
+  transition: transform 0.2s ease;
+}
+
+.hero__cta a:hover { transform: translateY(-2px); }
+
+.hero__cta a.primary {
+  color: var(--dark);
+  background: var(--white);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+}
+
+.hero__cta a.ghost {
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(139, 185, 255, 0.4);
+  background: rgba(255, 255, 255, 0.07);
+}
+
 .hero__stack-cloud {
   display: flex;
   flex-wrap: wrap;
@@ -390,6 +422,28 @@ a {
   border-radius: 999px;
   color: #27677d;
   background: #eaf6fa;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.resume-card--ongoing {
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid #1f3dbf;
+  background:
+    radial-gradient(circle at 96% 8%, rgba(31, 61, 191, 0.12), transparent 30%),
+    linear-gradient(135deg, #ffffff, #f5f7ff);
+}
+
+.resume-card--ongoing::before {
+  content: "진행 중";
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #1f3dbf;
   font-size: 12px;
   font-weight: 900;
 }
@@ -638,6 +692,23 @@ a {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 24px;
+}
+
+.project-inside {
+  margin: 18px 0 0;
+  color: #5b6478;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.feature-project { transition: transform 0.22s ease, box-shadow 0.22s ease; cursor: pointer; }
+.feature-project:hover { transform: translateY(-4px); box-shadow: 0 28px 70px rgba(0, 0, 0, 0.1); }
+.feature-project:hover .project-links__primary { background: #1531a3; }
+
+.project-links a.project-links__primary {
+  color: var(--white);
+  background: #1f3dbf;
+  box-shadow: 0 10px 24px rgba(31, 61, 191, 0.28);
 }
 
 .project-links a {

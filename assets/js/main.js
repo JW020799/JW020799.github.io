@@ -91,3 +91,14 @@ document.querySelectorAll(".slide-viewer").forEach((viewer) => {
   viewer.addEventListener("pointercancel", stopDrag);
   viewer.addEventListener("pointerleave", stopDrag);
 });
+
+
+// 프로젝트 카드 전체를 클릭하면 상세 페이지로 이동 (카드 안의 링크는 각자 동작)
+document.querySelectorAll(".feature-project").forEach((card) => {
+  const primary = card.querySelector(".project-links__primary");
+  if (!primary) return;
+  card.addEventListener("click", (e) => {
+    if (e.target.closest("a")) return;
+    window.location.href = primary.getAttribute("href");
+  });
+});
