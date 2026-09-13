@@ -1534,3 +1534,20 @@ a {
     height: 520px;
   }
 }
+
+/* ===== 2026-09 redesign overrides (detail pages) ===== */
+:root{--blue:#2d3be6;--blue-2:#2d3be6;--tint:#f3f5fb;--line:#d9dcea;--text:#1c2140;--muted:#5b6280}
+body{font-family:"Apple SD Gothic Neo","Pretendard","Noto Sans KR",-apple-system,sans-serif;background:#f3f5fb}
+.detail-hero{background:#f3f5fb;color:#1c2140}
+.detail-hero h1,.detail-hero p,.detail-nav a{color:#1c2140}
+.detail-kicker{color:#2d3be6}
+.detail-meta{background:#fff;border:1px solid #d9dcea;color:#1c2140}
+.detail-meta *{color:#1c2140}
+.detail-meta dt,.detail-meta .k,.detail-meta strong{color:#2d3be6}
+.detail-actions a{background:#fff;color:#1c2140;border:1px solid #d9dcea}
+.detail-actions a.primary{background:#2d3be6;color:#fff;border-color:#2d3be6}
+.footer{background:#2d3be6}
+.footer a{color:#fff}
+.problem-card::before{display:none}
+.problem-card{border:1px solid #d9dcea;box-shadow:none}
+.problem-label{background:#2d3be6;color:#fff}
