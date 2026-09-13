@@ -8,8 +8,8 @@
 <meta property="og:title" content="전지원 | AI Service Backend Developer" />
 <meta property="og:description" content="근거가 부족한 리포트는 따로 분리하고, 틀린 사례가 견적에 쓰이지 않도록 기준을 세웠습니다." />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-<link rel="stylesheet" href="assets/css/deck.css?v=20260914eeeeeebb" />
-<link rel="stylesheet" href="assets/css/deck-web.css?v=20260914eeeeeedb" />
+<link rel="stylesheet" href="assets/css/deck.css?v=20260914eeeeeeebb" />
+<link rel="stylesheet" href="assets/css/deck-web.css?v=20260914eeeeeeedb" />
 </head>
 <body class="web">
 <nav class="deck-nav"><div class="in">
@@ -75,7 +75,7 @@
   <div class="pj-idx">
     <div class="card"><p class="n">01 · 팀 프로젝트 · 4명</p><h3>TUKTAK</h3><p class="sub">AI 집수리 견적 · 리스크 리포트 · 시공자 역경매 매칭</p><ul class="dash"><li>2026.06 ~ 2026.08</li><li>AI 백엔드 · RAG · 이미지 유사도 검색 담당</li><li>오답 통과 0개 threshold, 근거 부족 시 FAILED 분리</li></ul></div>
     <div class="card"><p class="n">02 · 개인 프로젝트 · 1명</p><h3>Investment Agent Report</h3><p class="sub">RAG + LangGraph Agent 기반 투자 리포트 데모</p><ul class="dash"><li>2026.08, 수료 다음 날부터 6일</li><li>전체 설계 · 구현</li><li>Agent 6개 · API 4개, 외부 API 실패 시 리포트 유지</li></ul></div>
-    <div class="card"><p class="n">03 · 팀 프로젝트 · 5명</p><h3>GIUT</h3><p class="sub">공공데이터 기반 지역 행사 탐색 · AI 추천 코스</p><ul class="dash"><li>2026.04 ~ 2026.05</li><li>백엔드 모델 · API 담당</li><li>Event 모델 컬럼 19개 → 10개 재설계</li></ul></div>
+    <div class="card"><p class="n">03 · 팀 프로젝트 · 6명</p><h3>GIUT</h3><p class="sub">공공데이터 기반 지역 행사 탐색 · AI 추천 코스</p><ul class="dash"><li>2026.04 ~ 2026.05</li><li>이벤트 조회 · 필터 API 담당</li><li>Event 모델 컬럼 19개 → 10개 재설계</li></ul></div>
   </div>
 </section></div>
 
@@ -334,16 +334,15 @@
       <p style="margin-top:22px">한국관광공사 공공데이터로 지역 행사를 탐색하고, OpenAI API로 지역 · 날짜 · 취향에 맞는 행사 코스를 추천하는 웹 서비스입니다.</p>
       <div class="meta">
         <span class="k">기간</span><span>2026.04.13 ~ 2026.05.27 (약 6주)</span>
-        <span class="k">인원</span><span>5명 · IBM x Red Hat AI 부트캠프 중간 프로젝트</span>
-        <span class="k">역할</span><span>백엔드 모델 · API, 화면 일부</span>
+        <span class="k">인원</span><span>6명 · IBM x Red Hat AI 부트캠프 중간 프로젝트</span>
+        <span class="k">역할</span><span>이벤트 데이터 모델 · 이벤트 조회 / 필터 API</span>
       </div>
-      <h4>담당 업무</h4>
+      <h4>담당 업무 (발표자료 팀 역할 기준)</h4>
       <ul class="dash">
-        <li>Event · EventDetail · Course 모델과 Pydantic 스키마 설계, Course API 구현</li>
-        <li>JWT + HttpOnly Cookie 기반 회원가입 · 로그인 API</li>
-        <li>지역 · 날짜 · 키워드 조건 행사 검색 · 필터링 API</li>
-        <li>GPT 추천 코스 저장 · 마이페이지 조회 API, React 주요 화면 연동</li>
-        <li>AWS EC2에 Docker Compose로 배포</li>
+        <li>Event · EventDetail 모델과 Pydantic 스키마 설계</li>
+        <li>이벤트 조회 API 5개: 행사 목록(필터) · 행사 상세 · 전국 TOP 10 · 지역 TOP 3 · 자동완성 검색</li>
+        <li>지역 · 날짜 · 키워드 복합 조건 필터링과 선택적 필터 조합</li>
+        <li>한국관광공사 API 응답 구조를 서비스 기준 테이블로 재설계</li>
       </ul>
       <h4 style="margin-top:22px">기술 스택</h4>
       <div class="chips"><span><img src="assets/icons/tech/fastapi.svg" alt="">FastAPI</span><span><img src="assets/icons/tech/mysql.svg" alt="">MySQL</span><span><img src="assets/icons/tech/sqlalchemy.svg" alt="">SQLAlchemy</span><span><img src="assets/icons/tech/jwt.svg" alt="">JWT</span><span><img src="assets/icons/tech/react.svg" alt="">React</span><span><img src="assets/icons/tech/openai.svg" alt="">OpenAI API</span><span><img src="assets/icons/tech/publicapi.svg" alt="">한국관광공사 API</span><span><img src="assets/icons/tech/naver.svg" alt="">Naver Map API</span><span><img src="assets/icons/tech/docker.svg" alt="">Docker Compose</span><span><img src="assets/icons/tech/aws.svg" alt="">AWS EC2</span></div>
@@ -374,10 +373,10 @@
         <tr><td>기준</td><td>한국관광공사 API 응답 필드를 그대로 옮김</td><td>화면에 필요한 필드 중심</td></tr>
         <tr><td>컬럼</td><td class="num">19개 (contentid, mapx/mapy, lclsSystm3 …)</td><td class="num">10개 (제목 · 지역 · 기간 · 장소 · 이미지 · 설명 · 좋아요 수 …)</td></tr>
         <tr><td>이름</td><td>모든 컬럼에 event_ 접두어, 스키마와 불일치</td><td>접두어 제거, 모델 · 스키마 필드명 일치</td></tr>
-        <tr><td>범위</td><td>Event만</td><td>EventDetail · Course도 같은 기준으로 정리</td></tr>
+        <tr><td>범위</td><td>Event만</td><td>EventDetail도 같은 기준으로 정리</td></tr>
       </table>
       <div class="learn"><h3>화면에서 쓰지 않는 필드까지 관리하던 비용이 사라졌습니다</h3><p>외부 API 응답 구조를 그대로 옮기면 처음엔 빠르지만, 스키마 불일치와 불필요한 필드 관리가 뒤따릅니다. 데이터 모델은 서비스 요구에서 시작해야 한다는 기준을 얻었습니다.</p></div>
-      <div class="learn"><h3>5명 팀에서 Branch · PR 기반으로 협업했습니다</h3><p>회원가입부터 조건 검색까지 API 전 구간을 맡아 구현하고, 공공데이터 · OpenAI · MySQL을 연동한 서비스를 EC2에 배포했습니다.</p></div>
+      <div class="learn"><h3>6명 팀에서 조회 API를 맡아 화면 담당자와 맞췄습니다</h3><p>행사 목록 · 상세 · 전국 TOP 10 · 지역 TOP 3 · 자동완성 API를 만들어 프론트엔드 담당자가 쓰는 응답을 제공했고, Git Branch · PR 기반으로 협업했습니다.</p></div>
     </div>
   </div>
 </section></div>
