@@ -4,141 +4,188 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Jeon Jiwon | AI Service Backend Developer</title>
-<meta name="description" content="AI 결과를 서비스 기준으로 검증하고 백엔드 흐름으로 연결하는 개발자 전지원의 포트폴리오" />
+<meta name="description" content="틀렸는지 알 수 없는 답을 만들지 않습니다. AI 결과를 검증해 서비스에 연결하는 백엔드 개발자 전지원의 포트폴리오" />
 <meta property="og:title" content="전지원 | AI Service Backend Developer" />
-<meta property="og:description" content="틀렸는지 알 수 없는 답을 만들지 않습니다. AI 결과를 검증해 서비스에 연결합니다." />
+<meta property="og:description" content="AI 결과를 그대로 내보내지 않고, 실패 조건을 먼저 정의한 뒤 서비스 기준 안에서 검증해 백엔드 흐름으로 연결합니다." />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-<link rel="stylesheet" href="assets/css/home.css?v=20260913b" />
+<link rel="stylesheet" href="assets/css/deck.css?v=20260914bb" />
+<link rel="stylesheet" href="assets/css/deck-web.css?v=20260914db" />
 </head>
-<body>
-
-<nav class="nav"><div class="wrap">
-  <a class="brand" href="#top">전지원<span>PORTFOLIO</span></a>
+<body class="web">
+<nav class="deck-nav"><div class="in">
+  <a class="brand" href="#cover">전지원<span>PORTFOLIO</span></a>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#evaluation">Evaluation</a></li>
+    <li><a href="#tuktak">TUKTAK</a></li>
+    <li><a href="#investment">Investment</a></li>
+    <li><a href="#giut">GIUT</a></li>
     <li><a href="#education">Education</a></li>
-    <li><a href="assets/jeonjiwon-resume.pdf" target="_blank" rel="noopener">이력서 PDF</a></li>
-    <li><a href="https://github.com/JW020799" target="_blank" rel="noopener">GitHub</a></li>
+    <li><a class="pdf" href="assets/jeonjiwon-portfolio.pdf" target="_blank" rel="noopener">PDF</a></li>
+    <li><a class="pdf" href="assets/jeonjiwon-resume.pdf" target="_blank" rel="noopener">이력서</a></li>
   </ul>
 </div></nav>
+<main class="deck">
 
-<header class="hero" id="top"><div class="wrap">
-  <p class="kicker">AI Service Backend Developer · Portfolio</p>
-  <h1>틀렸는지 알 수 없는 답을<br><span class="b">만들지 않습니다.</span></h1>
-  <p class="lead">AI 결과를 그대로 내보내지 않고, 실패 조건을 먼저 정의한 뒤 서비스 기준 안에서 검증해 백엔드 흐름으로 연결합니다.</p>
-  <div class="cta">
-    <a class="btn primary" href="#projects">프로젝트 보기</a>
-    <a class="btn" href="assets/jeonjiwon-portfolio.pdf" target="_blank" rel="noopener">포트폴리오 PDF</a>
-    <a class="btn" href="assets/jeonjiwon-resume.pdf" target="_blank" rel="noopener">이력서 PDF</a>
-  </div>
-  <div class="id">
-    <img src="assets/shots/photo.png" alt="전지원" />
-    <div><b>전지원 Jeon Jiwon</b><br><span class="mute">020799@naver.com · github.com/JW020799</span></div>
-  </div>
-</div></header>
 
-<section id="about" class="tight"><div class="wrap">
-  <p class="kicker">About</p>
-  <h2>일하는 기준 세 가지</h2>
-  <div class="rule"></div>
-  <div class="grid3">
-    <div class="card"><h3>1. 좋은 결과보다 실패 조건을 먼저 정의합니다</h3><p class="mute" style="margin-top:10px">근거 문서가 부족한 카테고리는 FAILED로 분리하고, 재무 데이터 수집이 실패하면 unavailable로 반환합니다. 틀린 답보다 위험한 것은 틀렸는지 알 수 없는 답입니다.</p></div>
-    <div class="card"><h3>2. 검증 근거는 숨기지 않고 화면에 드러냅니다</h3><p class="mute" style="margin-top:10px">유사도 점수와 참조 문서를 응답에 그대로 노출해 사용자가 직접 판단할 수 있게 합니다.</p></div>
-    <div class="card"><h3>3. 의견 차이는 같은 기준의 측정으로 좁힙니다</h3><p class="mute" style="margin-top:10px">정확도 하나로 갈리던 팀 의견을 "오답 통과율"이라는 지표로 바꿔 측정하고 합의했습니다.</p></div>
+<!-- 01 표지 -->
+<div class="slide-wrap" id="cover"><section class="slide">
+  <div style="margin-top:150px">
+    <p class="kicker">AI Service Backend Developer · Portfolio</p>
+    <h1 style="margin-top:34px;font-size:78px">틀렸는지 알 수 없는 답을<br><span class="b">만들지 않습니다.</span></h1>
+    <p style="margin-top:44px;font-size:28px;color:var(--mute);line-height:1.6">AI 결과를 그대로 내보내지 않고, 실패 조건을 먼저 정의한 뒤<br>서비스 기준 안에서 검증해 백엔드 흐름으로 연결합니다.</p>
   </div>
-  <div class="grid3" style="margin-top:34px">
-    <div><h4>Backend</h4><div class="chips"><span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>Pydantic</span><span>MySQL</span><span>JWT</span></div></div>
-    <div><h4>AI · RAG</h4><div class="chips"><span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>Sentence-Transformers</span><span>Ko-SRoBERTa</span><span>Hugging Face</span><span>OpenAI API</span></div></div>
-    <div><h4>Infra · Frontend</h4><div class="chips"><span>Docker</span><span>GitHub Actions</span><span>AWS EC2 · ECS</span><span>React</span><span>Vite</span></div></div>
+  <div style="position:absolute;left:110px;bottom:96px">
+    <p style="font-size:36px;font-weight:800">전지원 <span class="mute" style="font-size:22px;font-weight:700;margin-left:10px">Jeon Jiwon</span></p>
+    <p class="mute" style="margin-top:14px;font-size:20px"><a href="mailto:020799@naver.com">020799@naver.com</a> &nbsp;·&nbsp; <a href="https://github.com/JW020799" target="_blank" rel="noopener">github.com/JW020799</a> &nbsp;·&nbsp; jw020799.github.io</p>
   </div>
-</div></section>
+</section></div>
 
-<section id="projects"><div class="wrap">
-  <p class="kicker">Projects</p>
-  <h2>프로젝트 3건</h2>
-  <p class="mute" style="margin-bottom:34px">모두 FastAPI 백엔드 위에 AI 기능(RAG · 임베딩 검색 · Agent)을 서비스 기준으로 검증해 연결한 경험입니다.</p>
-
-  <article class="pj">
-    <div>
-      <p class="kicker">01 · 팀 프로젝트 · 4명 · 2026.06 ~ 08</p>
-      <h3 style="font-size:30px">TUKTAK</h3>
-      <p class="sub">AI 기반 집수리 견적 · 리스크 리포트 · 시공자 역경매 매칭 플랫폼</p>
-      <p style="font-size:15px">사용자가 수리 사진과 설명을 올리면 AI가 기준 견적과 리스크 리포트를 먼저 만들고, 시공자 제안 비교로 이어집니다.</p>
-      <div class="meta"><span class="k">역할</span><span>AI 백엔드 · RAG · 이미지 유사도 검색, Risk Report 도메인(Main Backend)</span><span class="k">스택</span><span>FastAPI · SQLAlchemy · MySQL · LangChain · LangGraph · ChromaDB · React · Docker · AWS ECS · GitHub Actions</span></div>
-      <ul class="dash">
-        <li>Ko-SRoBERTa + ChromaDB 기반 RAG 문서 검색 설계 · 구현 (문서 71개, 리스크 항목 5개 threshold)</li>
-        <li>임베딩 모델 4종 비교 후 카테고리별 threshold 설계 — <b>오답 통과 0개</b>, 정답 통과율 60.4%</li>
-        <li>근거 부족 카테고리를 FAILED로 분리해 잘못된 위험도 노출 차단 (10개 중 9개 COMPLETED)</li>
-        <li>수리 요청 구조화 모델 검증 — <b>정확도 86.4%</b>, 요청당 0.014초</li>
-      </ul>
-      <p class="inside">상세 페이지: 배포 아키텍처 다이어그램 · 문제 해결 6건 · 시연 영상 · 발표자료 47장</p>
-      <div class="links"><a class="btn primary" href="projects/tuktak/">아키텍처 · 문제 해결 보기 →</a><a class="btn" href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">GitHub</a></div>
+<!-- 02 About -->
+<div class="slide-wrap" id="about"><section class="slide">
+  <div class="row" style="gap:70px">
+    <div style="width:520px;flex:none">
+      <p class="kicker">About</p>
+      <div class="shot" style="width:300px;margin:34px 0 30px;border-radius:20px"><img src="assets/shots/photo.png"></div>
+      <h3>전지원</h3>
+      <p class="mute" style="margin-top:6px">AI 서비스 백엔드 개발자</p>
+      <p class="mute" style="font-size:18px;margin-top:22px;line-height:1.7">020799@naver.com<br>github.com/JW020799<br>jw020799.github.io</p>
     </div>
-    <div>
-      <div class="phones">
-        <div class="shot"><img src="assets/shots/phone_home.png" alt="홈" /></div>
-        <div class="shot"><img src="assets/shots/phone_upload.png" alt="사진 업로드" /></div>
-        <div class="shot"><img src="assets/shots/phone_risk2.png" alt="AI 리스크 리포트" /></div>
-        <div class="shot"><img src="assets/shots/phone_match.png" alt="시공자 매칭" /></div>
+    <div class="col">
+      <h2>일하는 기준 세 가지</h2>
+      <div class="rule"></div>
+      <div class="card" style="margin-bottom:18px"><h3>1. 좋은 결과보다 실패 조건을 먼저 정의합니다</h3><p class="mute" style="margin-top:8px">근거 문서가 부족한 카테고리는 FAILED로 분리하고, 재무 데이터 수집이 실패하면 unavailable로 반환합니다. 틀린 답보다 위험한 것은 틀렸는지 알 수 없는 답입니다.</p></div>
+      <div class="card" style="margin-bottom:18px"><h3>2. 검증 근거는 숨기지 않고 화면에 드러냅니다</h3><p class="mute" style="margin-top:8px">유사도 점수와 참조 문서를 응답에 그대로 노출해 사용자가 직접 판단할 수 있게 합니다.</p></div>
+      <div class="card" style="margin-bottom:26px"><h3>3. 의견 차이는 같은 기준의 측정으로 좁힙니다</h3><p class="mute" style="margin-top:8px">정확도 하나로 갈리던 팀 의견을 "오답 통과율"이라는 지표로 바꿔 측정하고 합의했습니다.</p></div>
+      <h4>Tech Stack</h4>
+      <div class="row" style="gap:22px">
+        <div class="col"><p class="mute" style="font-size:16px;font-weight:800;margin-bottom:8px">Backend</p><div class="chips"><span><img src="assets/icons/tech/python.svg" alt="">Python</span><span><img src="assets/icons/tech/fastapi.svg" alt="">FastAPI</span><span><img src="assets/icons/tech/sqlalchemy.svg" alt="">SQLAlchemy</span><span><img src="assets/icons/tech/pydantic.svg" alt="">Pydantic</span><span><img src="assets/icons/tech/mysql.svg" alt="">MySQL</span><span><img src="assets/icons/tech/jwt.svg" alt="">JWT</span></div></div>
+        <div class="col" style="flex:1.5"><p class="mute" style="font-size:16px;font-weight:800;margin-bottom:8px">AI · RAG</p><div class="chips"><span><img src="assets/icons/tech/langchain.svg" alt="">LangChain</span><span><img src="assets/icons/tech/langgraph.svg" alt="">LangGraph</span><span><img src="assets/icons/tech/chromadb.svg" alt="">ChromaDB</span><span><img src="assets/icons/tech/huggingface.svg" alt="">Sentence-Transformers</span><span><img src="assets/icons/tech/huggingface.svg" alt="">Ko-SRoBERTa</span><span><img src="assets/icons/tech/huggingface.svg" alt="">Hugging Face</span><span><img src="assets/icons/tech/openai.svg" alt="">OpenAI API</span></div></div>
+        <div class="col"><p class="mute" style="font-size:16px;font-weight:800;margin-bottom:8px">Infra · Frontend</p><div class="chips"><span><img src="assets/icons/tech/docker.svg" alt="">Docker</span><span><img src="assets/icons/tech/githubactions.svg" alt="">GitHub Actions</span><span><img src="assets/icons/tech/aws.svg" alt="">AWS EC2 · ECS</span><span><img src="assets/icons/tech/react.svg" alt="">React</span><span><img src="assets/icons/tech/vite.svg" alt="">Vite</span></div></div>
       </div>
-      <p class="mute" style="font-size:13px;margin-top:10px;text-align:center">홈 → 사진 업로드 → AI 리스크 리포트 → 시공자 매칭 (시연 영상 캡처)</p>
     </div>
-  </article>
+  </div>
+</section></div>
 
-  <article class="pj">
-    <div>
-      <p class="kicker">02 · 개인 프로젝트 · 1명 · 2026.08 (6일)</p>
-      <h3 style="font-size:30px">Investment Agent Report</h3>
-      <p class="sub">RAG + LangGraph Agent 기반 투자 리포트 데모</p>
-      <p style="font-size:15px">기업명 · 티커를 입력하면 뉴스와 재무 데이터를 수집해 RAG 검색과 Agent 분석으로 참고 리포트를 생성합니다. 부트캠프 수료 다음 날 시작해 6일 만에 수집부터 API까지 혼자 만들었습니다.</p>
-      <div class="meta"><span class="k">역할</span><span>전체 설계 · 구현</span><span class="k">스택</span><span>Python 3.11 · FastAPI · SQLAlchemy · LangGraph · ChromaDB · Sentence-Transformers · Streamlit · yfinance · Docker Compose</span></div>
+<!-- 03 프로젝트 목차 -->
+<div class="slide-wrap" id="projects"><section class="slide">
+  <p class="kicker">Projects</p>
+  <h2 style="margin-top:20px">프로젝트 3건</h2>
+  <p class="mute" style="margin-top:12px">모두 FastAPI 백엔드 위에 AI 기능(RAG · 임베딩 검색 · Agent)을 서비스 기준으로 검증해 연결한 경험입니다.</p>
+  <div class="pj-idx">
+    <div class="card"><p class="n">01 · 팀 프로젝트 · 4명</p><h3>TUKTAK</h3><p class="sub">AI 집수리 견적 · 리스크 리포트 · 시공자 역경매 매칭</p><ul class="dash"><li>2026.06 ~ 2026.08</li><li>AI 백엔드 · RAG · 이미지 유사도 검색 담당</li><li>오답 통과 0개 threshold, 구조화 정확도 86.4%</li></ul></div>
+    <div class="card"><p class="n">02 · 개인 프로젝트 · 1명</p><h3>Investment Agent Report</h3><p class="sub">RAG + LangGraph Agent 기반 투자 리포트 데모</p><ul class="dash"><li>2026.08, 수료 다음 날부터 6일</li><li>전체 설계 · 구현</li><li>Agent 6개 · API 4개, 외부 API 실패 시 리포트 유지</li></ul></div>
+    <div class="card"><p class="n">03 · 팀 프로젝트 · 5명</p><h3>GIUT</h3><p class="sub">공공데이터 기반 지역 행사 탐색 · AI 추천 코스</p><ul class="dash"><li>2026.04 ~ 2026.05</li><li>백엔드 모델 · API 담당</li><li>Event 모델 컬럼 19개 → 10개 재설계</li></ul></div>
+  </div>
+</section></div>
+
+<!-- 04 TUKTAK 개요 -->
+<div class="slide-wrap" id="tuktak"><section class="slide">
+  <div class="row" style="gap:60px">
+    <div style="width:760px;flex:none">
+      <p class="kicker">Project 01 · Team</p>
+      <h2 style="margin-top:16px">TUKTAK</h2>
+      <p class="mute" style="font-size:24px;margin-top:6px">AI 기반 집수리 견적 · 리스크 리포트 · 시공자 역경매 매칭 플랫폼</p>
+      <p style="margin-top:22px">사용자가 수리 사진과 설명을 올리면 AI가 기준 견적과 리스크 리포트를 먼저 만들고, 시공자 제안 비교로 이어집니다. 집수리에서 소비자가 겪는 정보 비대칭을 줄이는 것이 목표입니다.</p>
+      <div class="meta">
+        <span class="k">기간</span><span>2026.06.12 ~ 2026.08.04 (8주)</span>
+        <span class="k">인원</span><span>4명 · IBM x Red Hat AI 부트캠프 최종 프로젝트</span>
+        <span class="k">역할</span><span>AI 백엔드 · RAG · 이미지 유사도 검색, Risk Report 도메인(Main Backend)</span>
+      </div>
+      <h4>주요 기능</h4>
       <ul class="dash">
-        <li>Google News RSS · yfinance 데이터 수집과 실패 처리 구현</li>
-        <li>LangGraph 기반 <b>Agent 6개</b> 워크플로우, <b>API 엔드포인트 4개</b></li>
-        <li>yfinance 429 오류 시 status: unavailable로 반환해 리포트 생성 유지</li>
-        <li>유사도 점수와 참조 문서를 응답에 그대로 노출</li>
+        <li>사진 + 설명 → 수리 요청 구조화 → AI 견적서 생성</li>
+        <li>근거 문서 71개 기반 RAG 리스크 리포트 (추가 비용 · 안전 · 계약 · 현장)</li>
+        <li>이미지 유사사례 검색으로 기존 수리 사례 매칭</li>
+        <li>시공자 역경매 매칭 · 제안 비교 · 채팅 · 리뷰</li>
       </ul>
-      <p class="inside">상세 페이지: Agent 워크플로우 아키텍처 · 문제 해결 4건 · API 명세</p>
-      <div class="links"><a class="btn primary" href="projects/investment-agent-report/">아키텍처 · 문제 해결 보기 →</a><a class="btn" href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">GitHub</a></div>
+      <h4 style="margin-top:22px">기술 스택</h4>
+      <div class="chips"><span><img src="assets/icons/tech/fastapi.svg" alt="">FastAPI</span><span><img src="assets/icons/tech/sqlalchemy.svg" alt="">SQLAlchemy</span><span><img src="assets/icons/tech/mysql.svg" alt="">MySQL</span><span><img src="assets/icons/tech/langchain.svg" alt="">LangChain</span><span><img src="assets/icons/tech/langgraph.svg" alt="">LangGraph</span><span><img src="assets/icons/tech/chromadb.svg" alt="">ChromaDB</span><span><img src="assets/icons/tech/huggingface.svg" alt="">Hugging Face</span><span><img src="assets/icons/tech/openai.svg" alt="">OpenAI API</span><span><img src="assets/icons/tech/react.svg" alt="">React</span><span><img src="assets/icons/tech/docker.svg" alt="">Docker</span><span><img src="assets/icons/tech/aws.svg" alt="">AWS ECS · S3 · CloudFront</span><span><img src="assets/icons/tech/githubactions.svg" alt="">GitHub Actions</span></div>
+      <p class="mute" style="font-size:17px;margin-top:26px"><a href="https://github.com/JW020799/tuktak-project-summary" target="_blank" rel="noopener">GitHub · github.com/JW020799/tuktak-project-summary</a> &nbsp;·&nbsp; <a class="b" href="projects/tuktak/">상세 페이지 →</a></p>
     </div>
-    <div>
-      <div class="shot"><img src="assets/shots/inv_streamlit.png" alt="Streamlit 데모" /></div>
-      <div class="shot" style="margin-top:12px;background:#0f1220"><img src="assets/shots/inv_architecture.png" alt="아키텍처" /></div>
+    <div class="col">
+      <div class="phones" style="margin-top:18px">
+        <div class="shot" style="width:220px"><img src="assets/shots/phone_home.png"></div>
+        <div class="shot" style="width:220px"><img src="assets/shots/phone_upload.png"></div>
+        <div class="shot" style="width:220px"><img src="assets/shots/phone_risk2.png"></div>
+        <div class="shot" style="width:220px"><img src="assets/shots/phone_match.png"></div>
+      </div>
+      <p class="mute" style="font-size:16px;margin-top:14px;text-align:center">홈 → 사진 업로드 → AI 리스크 리포트 → 시공자 매칭 (시연 영상 캡처)</p>
     </div>
-  </article>
+  </div>
+</section></div>
 
-  <article class="pj">
-    <div>
-      <p class="kicker">03 · 팀 프로젝트 · 5명 · 2026.04 ~ 05</p>
-      <h3 style="font-size:30px">GIUT</h3>
-      <p class="sub">공공데이터와 AI를 활용한 지역 행사 탐색 · 추천 코스 서비스</p>
-      <p style="font-size:15px">한국관광공사 공공데이터로 지역 행사를 탐색하고, OpenAI API로 지역 · 날짜 · 취향에 맞는 행사 코스를 추천하는 웹 서비스입니다.</p>
-      <div class="meta"><span class="k">역할</span><span>백엔드 모델 · API, 화면 일부</span><span class="k">스택</span><span>FastAPI · MySQL · SQLAlchemy · JWT · React · OpenAI API · 한국관광공사 API · Naver Map API · Docker Compose · AWS EC2</span></div>
+<!-- 05 TUKTAK 아키텍처 · 역할 -->
+<div class="slide-wrap" id="tuktak-architecture"><section class="slide">
+  <div class="row" style="gap:50px">
+    <div style="width:1040px;flex:none">
+      <p class="kicker">Project 01 · Architecture</p>
+      <h2 style="margin-top:16px;font-size:40px">React · Main Backend · AI Service를 분리한 구조</h2>
+      <div class="shot" style="margin-top:22px;padding:14px;background:#fff"><img src="assets/projects/resource-thumbs/deploy-architecture.png"></div>
+      <p class="mute" style="font-size:16px;margin-top:10px">S3 · CloudFront(정적 웹) / ALB → ECS(Main Backend, AI Service) / RDS MySQL / ChromaDB · GitHub Actions로 Docker 이미지 빌드 · ECR 푸시</p>
+    </div>
+    <div class="col">
+      <h4>담당 업무</h4>
       <ul class="dash">
-        <li>JWT + HttpOnly Cookie 기반 회원가입 · 로그인 API, 지역 · 날짜 · 키워드 조건 검색 API 구현</li>
-        <li>GPT 추천 코스 저장 · 마이페이지 조회 API 구현</li>
-        <li>Event 모델을 서비스 요구 기준으로 재설계 — <b>컬럼 19개 → 10개</b></li>
-        <li>공공데이터 · OpenAI · MySQL 연동 서비스를 AWS EC2에 Docker Compose로 배포</li>
+        <li><b>RAG 리스크 문서 검색 설계 · 구현</b> — 근거 문서 71개 임베딩, 리스크 항목 5개별 메타데이터 필터</li>
+        <li><b>Risk Report 도메인 모델 · API</b> — 생성 · 저장 · 조회, Main Backend ↔ AI Service 연동</li>
+        <li><b>이미지 유사사례 검색</b> — 임베딩 모델 4종 비교, 카테고리별 threshold 설계</li>
+        <li><b>수리 요청 구조화 모델 검증</b> — KLUE-RoBERTa vs KoELECTRA vs LLM 후보</li>
+        <li><b>React 화면</b> — 고객 · 시공자 마이페이지, 홈, AI 리스크 페이지 연동</li>
+        <li><b>배포</b> — AI Service Dockerfile, GitHub Actions 빌드 워크플로우</li>
       </ul>
-      <p class="inside">상세 페이지: 시스템 아키텍처 · 문제 해결 4건 · 발표자료 41장</p>
-      <div class="links"><a class="btn primary" href="projects/giut/">아키텍처 · 문제 해결 보기 →</a><a class="btn" href="https://github.com/Baikseungwoo/IBM-x-RedHat-Midterm-Project" target="_blank" rel="noopener">GitHub</a></div>
+      <div class="learn">
+        <h3>근거가 부족하면 FAILED로 분리해 잘못된 위험도 노출을 막았습니다</h3>
+        <p>유사도 점수 하나로 결과를 확정하던 구조를 리스크 항목 5개로 나누고, UNKNOWN이 3개 이상이면 FAILED로 처리했습니다. 10개 카테고리 중 근거가 부족한 1개가 분리됐습니다.</p>
+      </div>
+      <div class="learn">
+        <h3>정확도 대신 오답 통과율로 팀 기준을 바꿨습니다</h3>
+        <p>잘못된 사례가 견적 근거로 쓰이는 비용이 더 크다고 보고, 오답 통과 0개를 1순위로 두었습니다. 그 기준에서 정답 통과율 60.4%를 감수했습니다.</p>
+      </div>
     </div>
-    <div class="stack">
-      <div class="shot tall"><img src="assets/shots/giut_list.png" alt="행사 목록" /></div>
-      <div class="shot"><img src="assets/shots/giut_ai_result.png" alt="AI 추천 결과" /></div>
-      <div class="shot"><img src="assets/shots/giut_ai_input.png" alt="AI 추천 입력" /></div>
-    </div>
-  </article>
-</div></section>
+  </div>
+</section></div>
 
-<section id="evaluation" class="tight"><div class="wrap">
-  <p class="kicker">Evaluation · TUKTAK</p>
-  <h2>구조화 모델 선정 — 5개 필드 정확도 비교</h2>
-  <p class="mute">4차 최종 서비스 적합성 평가 · Accuracy(%) · missing_info 제외 5개 구조화 필드</p>
-  <div class="grid2" style="margin-top:26px;align-items:start">
-    <div class="card">
+<!-- 06 TUKTAK AI 흐름 + RAG 설계 -->
+<div class="slide-wrap" id="tuktak-pipeline"><section class="slide">
+  <p class="kicker">Project 01 · AI Pipeline</p>
+  <h2 style="margin-top:16px;font-size:40px">입력 검증 → 구조화 → 유사사례 → 견적 → RAG 리스크 리포트</h2>
+  <div class="flow" style="margin-top:34px">
+    <div class="st"><b>01 입력 유효성 검사</b><span>Rule-Engine 가중치 점수. 욕설 · 스팸 · 범위 밖 문장 차단<br><b style="color:var(--blue);font-size:17px">오통과율 0.00% · 정확도 93.21%</b></span></div>
+    <div class="st"><b>02 사진 품질 검사</b><span>OpenCV 기반 흐림 · 노출 판정, Vision LLM 전달 전 재촬영 유도<br><b style="color:var(--blue);font-size:17px">ROC-AUC 0.790 · 15ms · 비용 $0</b></span></div>
+    <div class="st"><b>03 수리 요청 구조화</b><span>KLUE-RoBERTa-base로 카테고리 · 대상 · 문제 유형 · 작업 추출<br><b style="color:var(--blue);font-size:17px">정확도 86.4% · 0.014초</b></span></div>
+    <div class="st"><b>04 유사사례 검색</b><span>Nomic Embed Vision + cosine, 카테고리별 threshold<br><b style="color:var(--blue);font-size:17px">오답 통과 0개 · 정답 통과율 60.4%</b></span></div>
+    <div class="st"><b>05 RAG 리스크 리포트</b><span>Ko-SRoBERTa + ChromaDB, 근거 문서 71개, Top-K 3<br><b style="color:var(--blue);font-size:17px">근거 부족 시 FAILED 분리</b></span></div>
+  </div>
+  <div class="row" style="margin-top:44px;gap:40px">
+    <div class="col">
+      <h4>RAG 리스크 항목별 threshold · 가중치 (직접 설계)</h4>
+      <table><tr><th>리스크 항목</th><th>threshold</th><th>가중치</th><th>의미</th></tr>
+        <tr><td>PRICE</td><td class="num">0.30</td><td class="num">10%</td><td>가격 · 견적 리스크 (통계 자료는 가격 근거에서 제외)</td></tr>
+        <tr><td>EXTRA_COST</td><td class="num">0.55</td><td class="num">20%</td><td>추가 공사 · 추가 비용</td></tr>
+        <tr><td>SAFETY</td><td class="num">0.60</td><td class="num">30%</td><td>작업 중 안전 · 사용자 안전</td></tr>
+        <tr><td>CONTRACT</td><td class="num">0.60</td><td class="num">25%</td><td>계약 · 하자보수 · AS · 분쟁</td></tr>
+        <tr><td>FIELD</td><td class="num">0.65</td><td class="num">15%</td><td>현장 방문 전 확인하기 어려운 변수</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <h4>설계 판단</h4>
+      <ul class="dash">
+        <li><b>임베딩 모델</b> — BGE-M3(1024차원)보다 가볍고 운영 부담이 적은 Ko-SRoBERTa(768차원) 채택. 한국어 요약문 · 메타데이터 중심 문서에 안정적</li>
+        <li><b>실패 기준</b> — 항목 5개 중 UNKNOWN 3개 이상이면 리포트를 FAILED로 분리. 10개 카테고리 테스트에서 9개 COMPLETED, 1개 FAILED</li>
+        <li><b>가격 근거</b> — 소비자 피해구제 통계(STAT)는 특정 수리의 직접 가격 근거가 아니므로 PRICE 검색에서 제외</li>
+        <li><b>구조화 모델</b> — LLM 후보 3종 100건 평가에서 Qwen 오류 78건 · 지연 27.7초. 구조화는 소형 모델(KLUE-RoBERTa, 0.014초)로 결정</li>
+      </ul>
+    </div>
+  </div>
+</section></div>
+
+<!-- 07 TUKTAK 모델 비교 실험 -->
+<div class="slide-wrap" id="tuktak-evaluation"><section class="slide">
+  <p class="kicker">Project 01 · Evaluation</p>
+  <h2 style="margin-top:16px;font-size:40px">구조화 모델 선정 — 5개 필드 정확도 비교</h2>
+  <div class="row" style="margin-top:30px;gap:50px">
+    <div style="width:1060px;flex:none">
       <div class="legend"><span><i style="background:var(--blue)"></i>KLUE-RoBERTa-base (채택)</span><span><i style="background:#b9c0ea"></i>KoELECTRA</span></div>
       <div class="chart">
         <div class="grp"><div class="bars"><div class="bar a" style="height:96.33%"><span class="v">96.3</span></div><div class="bar b" style="height:91.33%"><span class="v">91.3</span></div></div><div class="x">대분류</div></div>
@@ -148,43 +195,226 @@
         <div class="grp"><div class="bars"><div class="bar a" style="height:87.33%"><span class="v">87.3</span></div><div class="bar b" style="height:81.33%"><span class="v">81.3</span></div></div><div class="x">입력 유효성</div></div>
         <div class="grp"><div class="bars"><div class="bar a" style="height:86.4%"><span class="v">86.4</span></div><div class="bar b" style="height:77.13%"><span class="v">77.1</span></div></div><div class="x">평균</div></div>
       </div>
+      <p class="mute" style="font-size:16px;margin-top:12px">4차 최종 서비스 적합성 평가 · Accuracy(%) · missing_info 제외 5개 구조화 필드</p>
+      <div class="stat" style="margin-top:30px">
+        <div class="card"><div class="v">86.4%</div><div class="l">평균 정확도 (KoELECTRA 77.1%)</div></div>
+        <div class="card"><div class="v">0.014초</div><div class="l">요청당 처리시간 · LLM 호출 없음</div></div>
+        <div class="card"><div class="v">4단계</div><div class="l">기본 수행 → 구조화 정확도 → 예외 케이스 → 서비스 적합성</div></div>
+      </div>
     </div>
-    <div>
-      <h4>RAG 리스크 항목별 threshold · 가중치 (직접 설계)</h4>
-      <table><tr><th>리스크 항목</th><th>threshold</th><th>가중치</th><th>의미</th></tr>
-        <tr><td>PRICE</td><td>0.30</td><td>10%</td><td>가격 · 견적 리스크</td></tr>
-        <tr><td>EXTRA_COST</td><td>0.55</td><td>20%</td><td>추가 공사 · 추가 비용</td></tr>
-        <tr><td>SAFETY</td><td>0.60</td><td>30%</td><td>작업 중 안전 · 사용자 안전</td></tr>
-        <tr><td>CONTRACT</td><td>0.60</td><td>25%</td><td>계약 · 하자보수 · AS · 분쟁</td></tr>
-        <tr><td>FIELD</td><td>0.65</td><td>15%</td><td>현장 방문 전 확인하기 어려운 변수</td></tr>
+    <div class="col">
+      <h4>평가 설계</h4>
+      <ul class="dash">
+        <li>1차 기본 수행능력: 출력 성공 · 형식 준수 · 라벨 범주 준수 · 처리시간으로 KoT5 · EXAONE 제외</li>
+        <li>2차 구조화 정확도: 필드별 Accuracy · Macro-F1 · Exact Match. Qwen2.5-Instruct 제외</li>
+        <li>3차 예외 케이스: 모호한 입력 · 위험 요청 · 정보 부족 입력의 validity · missing_info 판정</li>
+        <li>4차 서비스 적합성: 5개 필드 정확도와 처리시간으로 최종 선정</li>
+      </ul>
+      <h4 style="margin-top:26px">이미지 유사사례 검색</h4>
+      <ul class="dash">
+        <li>후보: CLIP · DINOv2 · ConvNeXt · Nomic Embed Vision을 같은 기준으로 비교</li>
+        <li>카테고리마다 시각 난이도가 달라 공통 threshold 대신 카테고리별 threshold 적용</li>
+        <li>선정 우선순위: ① 오답 통과 최소화 ② 정답 통과 확보 ③ 부족 시 LLM · 기준표로 분기</li>
+        <li>결과: <b>오답 통과 0개, 정답 통과율 60.4%</b> (전체 1위)</li>
+      </ul>
+    </div>
+  </div>
+</section></div>
+
+<!-- 08 TUKTAK 문제 해결 -->
+<div class="slide-wrap" id="tuktak-problem"><section class="slide">
+  <p class="kicker">Project 01 · Problem Solving</p>
+  <h2 style="margin-top:16px;font-size:40px">문제 해결 과정</h2>
+  <div class="pb" style="margin-top:34px">
+    <div class="card">
+      <p class="t">근거 부족 케이스가 낮은 위험도로 정상 출력되던 문제</p>
+      <span class="lb">상황</span><p>근거 문서가 5개 중 2개뿐인 카테고리(가전)가 낮은 위험도로 정상 출력되고, 통계 자료가 가격 근거로 통과됐습니다.</p>
+      <span class="lb">원인</span><p>유사도 점수만으로 결과를 확정하고, 리스크 항목별 근거 수와 문서 유형을 확인하지 않았습니다.</p>
+      <span class="lb">행동</span><p>검색을 리스크 항목 5개로 나누고 문서 유형 · 카테고리 메타데이터 필터를 적용했습니다. UNKNOWN 3개 이상이면 FAILED로 처리하는 기준을 세웠습니다.</p>
+      <span class="lb">결과</span><p>근거 부족 카테고리가 FAILED로 분리되어 잘못된 위험도 노출을 차단했습니다. 좋은 결과보다 실패 조건을 먼저 정의하는 기준을 얻었습니다.</p>
+    </div>
+    <div class="card">
+      <p class="t">이미지 검색 기준에 대한 팀 의견 차이</p>
+      <span class="lb">상황</span><p>유사사례를 최대한 많이 보여주자는 의견과 틀린 사례가 하나라도 통과되는 것을 막자는 의견이 갈렸습니다.</p>
+      <span class="lb">원인</span><p>정확도라는 단일 지표로만 평가해, 잘못된 사례가 견적 근거로 쓰일 위험과 카테고리별 난이도 차이가 드러나지 않았습니다.</p>
+      <span class="lb">행동</span><p>평가 지표를 오답 통과율로 바꿔 다시 측정하자고 제안했습니다. 카테고리별 보수적 threshold를 적용하고, 애매한 경우는 LLM 판단으로 분기했습니다.</p>
+      <span class="lb">결과</span><p>오답 통과 0개 · 정답 통과율 60.4%라는 수치를 함께 보고 팀이 합의했습니다. 의견 차이는 설득이 아니라 같은 기준의 측정으로 좁혀진다는 것을 배웠습니다.</p>
+    </div>
+    <div class="card">
+      <p class="t">한국어 리스크 문서 검색 품질 저하</p>
+      <span class="lb">상황</span><p>LangChain 기본 임베딩 모델로는 한국어 근거 문서 검색 결과가 부정확했습니다.</p>
+      <span class="lb">원인</span><p>영문 위주 임베딩 모델이 한국어 요약문과 메타데이터 중심 문서에 맞지 않았습니다.</p>
+      <span class="lb">행동</span><p>임베딩 모델 성능평가를 직접 수행해 Ko-SRoBERTa로 교체했습니다. BGE-M3와 차원이 달라 ChromaDB 컬렉션을 분리했습니다.</p>
+      <span class="lb">결과</span><p>한국어 근거 문서 검색 품질이 개선됐고, 리스크 유형별 Top-K · threshold 기준을 확정했습니다.</p>
+    </div>
+  </div>
+</section></div>
+
+<!-- 09 Investment 개요 -->
+<div class="slide-wrap" id="investment"><section class="slide">
+  <div class="row" style="gap:60px">
+    <div style="width:760px;flex:none">
+      <p class="kicker">Project 02 · Solo</p>
+      <h2 style="margin-top:16px">Investment Agent Report</h2>
+      <p class="mute" style="font-size:24px;margin-top:6px">RAG + LangGraph Agent 기반 투자 리포트 데모</p>
+      <p style="margin-top:22px">기업명 · 티커를 입력하면 뉴스와 재무 데이터를 수집해 RAG 검색과 Agent 분석으로 참고 리포트를 생성합니다. 부트캠프 수료 다음 날 시작해 6일 만에 수집부터 API까지 혼자 만들었습니다.</p>
+      <div class="meta">
+        <span class="k">기간</span><span>2026.08.05 ~ 2026.08.10 (6일)</span>
+        <span class="k">인원</span><span>1명 · 전체 설계 · 구현</span>
+        <span class="k">구조</span><span>Rule-based baseline으로 만들고 LLM Agent로 교체 가능한 구조</span>
+      </div>
+      <h4>주요 기능</h4>
+      <ul class="dash">
+        <li>Google News RSS 뉴스 수집, yfinance 재무 데이터 수집과 실패 처리</li>
+        <li>Sentence-Transformers 임베딩 + ChromaDB 벡터 검색</li>
+        <li>Planner · RAG · News · Finance · Risk · Report 6개 Agent 워크플로우</li>
+        <li>FastAPI 리포트 생성 · 저장 · 조회 API 4개, Streamlit 데모, Docker Compose</li>
+      </ul>
+      <h4 style="margin-top:22px">기술 스택</h4>
+      <div class="chips"><span><img src="assets/icons/tech/python.svg" alt="">Python 3.11</span><span><img src="assets/icons/tech/fastapi.svg" alt="">FastAPI</span><span><img src="assets/icons/tech/sqlalchemy.svg" alt="">SQLAlchemy</span><span><img src="assets/icons/tech/langgraph.svg" alt="">LangGraph</span><span><img src="assets/icons/tech/chromadb.svg" alt="">ChromaDB</span><span><img src="assets/icons/tech/huggingface.svg" alt="">Sentence-Transformers</span><span><img src="assets/icons/tech/streamlit.svg" alt="">Streamlit</span><span><img src="assets/icons/tech/chart.svg" alt="">yfinance</span><span><img src="assets/icons/tech/docker.svg" alt="">Docker Compose</span></div>
+      <p class="mute" style="font-size:17px;margin-top:26px"><a href="https://github.com/JW020799/investment-agent-report" target="_blank" rel="noopener">GitHub · github.com/JW020799/investment-agent-report</a> &nbsp;·&nbsp; <a class="b" href="projects/investment-agent-report/">상세 페이지 →</a></p>
+    </div>
+    <div class="col">
+      <div class="shot" style="margin-top:18px"><img src="assets/shots/inv_streamlit.png" style="max-height:400px;width:auto;margin:0 auto"></div>
+      <p class="mute" style="font-size:16px;margin:10px 0 22px">Streamlit 데모 화면 — 기업명 · 티커 입력 후 리포트 생성</p>
+      <div class="shot" style="background:#0f1220"><img src="assets/shots/inv_architecture.png" style="max-height:378px;width:auto;margin:0 auto"></div>
+      <p class="mute" style="font-size:16px;margin-top:10px">아키텍처 — Streamlit / FastAPI → LangGraph 워크플로우 → Agent 6개 → ChromaDB (README 수록)</p>
+    </div>
+  </div>
+</section></div>
+
+<!-- 10 Investment 아키텍처 · 배운 점 -->
+<div class="slide-wrap" id="investment-architecture"><section class="slide">
+  <p class="kicker">Project 02 · Architecture</p>
+  <h2 style="margin-top:16px;font-size:40px">Agent 6개 워크플로우와 실패 처리</h2>
+  <div class="flow" style="margin-top:34px">
+    <div class="st"><b>입력</b><span>기업명 · 티커<br>Streamlit UI / FastAPI</span></div>
+    <div class="st"><b>Planner Agent</b><span>분석 계획 수립,<br>하위 Agent 호출 순서 결정</span></div>
+    <div class="st"><b>News · Finance Agent</b><span>Google News RSS 수집 · 감성/키워드<br>yfinance 가격 추세 (실패 시 unavailable)</span></div>
+    <div class="st"><b>RAG Agent</b><span>Sentence-Transformers 임베딩 →<br>ChromaDB top-k 근거 검색</span></div>
+    <div class="st"><b>Risk · Report Agent</b><span>리스크 점수 산출 →<br>참고 리포트 생성 · 저장</span></div>
+  </div>
+  <div class="row" style="margin-top:44px;gap:40px">
+    <div class="col">
+      <div class="learn" style="margin-top:0"><h3>외부 API가 실패해도 리포트 생성을 멈추지 않게 했습니다</h3><p>yfinance 429(Too Many Requests)로 전체 생성이 중단되던 문제를 fast_info · 최근 가격 이력 우선 사용으로 줄이고, 실패 시 status: unavailable로 반환해 뉴스 · RAG · Agent 분석만으로 리포트를 유지했습니다. 실패 원인은 응답에 그대로 남깁니다.</p></div>
+      <div class="learn"><h3>근거가 약한 리포트를 사용자가 바로 알 수 있게 했습니다</h3><p>경량 임베딩과 소량의 최신 뉴스만 대상으로 검색해 유사도 분포가 낮은 한계를 숨기지 않고, 유사도 점수와 참조 문서를 UI · API 응답에 그대로 노출했습니다. 임베딩 모델 비교 · threshold 필터링 · 뉴스 중복 제거는 확장 과제로 문서화했습니다.</p></div>
+    </div>
+    <div style="width:560px;flex:none">
+      <h4>API</h4>
+      <table><tr><th>Method</th><th>Endpoint</th><th>설명</th></tr>
+        <tr><td>POST</td><td>/api/v1/reports</td><td>리포트 생성 (워크플로우 실행)</td></tr>
+        <tr><td>GET</td><td>/api/v1/reports</td><td>리포트 목록</td></tr>
+        <tr><td>GET</td><td>/api/v1/reports/{id}</td><td>리포트 단건 조회</td></tr>
+        <tr><td>GET</td><td>/health</td><td>상태 확인</td></tr>
       </table>
-      <p class="mute" style="font-size:13px;margin-top:10px">항목 5개 중 UNKNOWN 3개 이상이면 리포트를 FAILED로 분리 · Top-K 3 · 근거 문서 71개</p>
+      <p class="mute" style="font-size:16px;margin-top:12px">Docker Compose로 API · UI 두 서비스 동시 실행 · README에 아키텍처 · API 명세 · 트러블슈팅 문서화</p>
     </div>
   </div>
-  <div class="stat" style="margin-top:22px">
-    <div class="card"><div class="v">86.4%</div><div class="l">구조화 평균 정확도 (KoELECTRA 77.1%)</div></div>
-    <div class="card"><div class="v">0.014초</div><div class="l">요청당 처리시간 · LLM 호출 없음</div></div>
-    <div class="card"><div class="v">0개</div><div class="l">이미지 유사사례 오답 통과 (정답 통과율 60.4%)</div></div>
-    <div class="card"><div class="v">9 / 10</div><div class="l">RAG 리포트 카테고리 COMPLETED, 근거 부족 1개 FAILED</div></div>
-  </div>
-</div></section>
+</section></div>
 
-<section id="education" class="edu"><div class="wrap">
+<!-- 11 GIUT 개요 -->
+<div class="slide-wrap" id="giut"><section class="slide">
+  <div class="row" style="gap:60px">
+    <div style="width:760px;flex:none">
+      <p class="kicker">Project 03 · Team</p>
+      <h2 style="margin-top:16px">GIUT</h2>
+      <p class="mute" style="font-size:24px;margin-top:6px">공공데이터와 AI를 활용한 지역 행사 탐색 · 추천 코스 서비스</p>
+      <p style="margin-top:22px">한국관광공사 공공데이터로 지역 행사를 탐색하고, OpenAI API로 지역 · 날짜 · 취향에 맞는 행사 코스를 추천하는 웹 서비스입니다.</p>
+      <div class="meta">
+        <span class="k">기간</span><span>2026.04.13 ~ 2026.05.27 (7주)</span>
+        <span class="k">인원</span><span>5명 · IBM x Red Hat AI 부트캠프 중간 프로젝트</span>
+        <span class="k">역할</span><span>백엔드 모델 · API, 화면 일부</span>
+      </div>
+      <h4>담당 업무</h4>
+      <ul class="dash">
+        <li>Event · EventDetail · Course 모델과 Pydantic 스키마 설계, Course API 구현</li>
+        <li>JWT + HttpOnly Cookie 기반 회원가입 · 로그인 API</li>
+        <li>지역 · 날짜 · 키워드 조건 행사 검색 · 필터링 API</li>
+        <li>GPT 추천 코스 저장 · 마이페이지 조회 API, React 주요 화면 연동</li>
+        <li>AWS EC2에 Docker Compose로 배포</li>
+      </ul>
+      <h4 style="margin-top:22px">기술 스택</h4>
+      <div class="chips"><span><img src="assets/icons/tech/fastapi.svg" alt="">FastAPI</span><span><img src="assets/icons/tech/mysql.svg" alt="">MySQL</span><span><img src="assets/icons/tech/sqlalchemy.svg" alt="">SQLAlchemy</span><span><img src="assets/icons/tech/jwt.svg" alt="">JWT</span><span><img src="assets/icons/tech/react.svg" alt="">React</span><span><img src="assets/icons/tech/openai.svg" alt="">OpenAI API</span><span><img src="assets/icons/tech/publicapi.svg" alt="">한국관광공사 API</span><span><img src="assets/icons/tech/naver.svg" alt="">Naver Map API</span><span><img src="assets/icons/tech/docker.svg" alt="">Docker Compose</span><span><img src="assets/icons/tech/aws.svg" alt="">AWS EC2</span></div>
+      <p class="mute" style="font-size:17px;margin-top:26px"><a href="https://github.com/Baikseungwoo/IBM-x-RedHat-Midterm-Project" target="_blank" rel="noopener">GitHub · IBM-x-RedHat-Midterm-Project</a> &nbsp;·&nbsp; <a class="b" href="projects/giut/">상세 페이지 →</a></p>
+    </div>
+    <div class="col">
+      <div class="row" style="gap:22px;margin-top:18px">
+        <div class="shot" style="width:330px;flex:none"><img src="assets/shots/giut_list.png"></div>
+        <div class="col"><div class="shot"><img src="assets/shots/giut_ai_result.png"></div><div class="shot" style="margin-top:22px"><img src="assets/shots/giut_ai_input.png"></div></div>
+      </div>
+      <p class="mute" style="font-size:16px;margin-top:12px;text-align:center">행사 목록(지역 · 날짜 · 검색 필터) / AI 행사 코스 추천 입력 · 결과</p>
+    </div>
+  </div>
+</section></div>
+
+<!-- 12 GIUT 아키텍처 · 모델 재설계 -->
+<div class="slide-wrap" id="giut-architecture"><section class="slide">
+  <p class="kicker">Project 03 · Architecture</p>
+  <h2 style="margin-top:16px;font-size:40px">외부 API 구조가 아니라 서비스 요구에서 모델을 시작했습니다</h2>
+  <div class="row" style="margin-top:30px;gap:50px">
+    <div style="width:900px;flex:none">
+      <div class="shot" style="padding:10px;background:#fff"><img src="assets/shots/giut_arch.png"></div>
+      <p class="mute" style="font-size:16px;margin-top:10px">React · Vite · Axios ↔ FastAPI · SQLAlchemy · Pydantic · JWT ↔ MySQL / OpenAI · 한국관광공사 API / Naver Map</p>
+    </div>
+    <div class="col">
+      <h4>Event 모델 재설계 — 컬럼 19개 → 10개</h4>
+      <table><tr><th>구분</th><th>재설계 전</th><th>재설계 후</th></tr>
+        <tr><td>기준</td><td>한국관광공사 API 응답 필드를 그대로 옮김</td><td>화면에 필요한 필드 중심</td></tr>
+        <tr><td>컬럼</td><td class="num">19개 (contentid, mapx/mapy, lclsSystm3 …)</td><td class="num">10개 (제목 · 지역 · 기간 · 장소 · 이미지 · 설명 · 좋아요 수 …)</td></tr>
+        <tr><td>이름</td><td>모든 컬럼에 event_ 접두어, 스키마와 불일치</td><td>접두어 제거, 모델 · 스키마 필드명 일치</td></tr>
+        <tr><td>범위</td><td>Event만</td><td>EventDetail · Course도 같은 기준으로 정리</td></tr>
+      </table>
+      <div class="learn"><h3>화면에서 쓰지 않는 필드까지 관리하던 비용이 사라졌습니다</h3><p>외부 API 응답 구조를 그대로 옮기면 처음엔 빠르지만, 스키마 불일치와 불필요한 필드 관리가 뒤따릅니다. 데이터 모델은 서비스 요구에서 시작해야 한다는 기준을 얻었습니다.</p></div>
+      <div class="learn"><h3>5명 팀에서 Branch · PR 기반으로 협업했습니다</h3><p>회원가입부터 조건 검색까지 API 전 구간을 맡아 구현하고, 공공데이터 · OpenAI · MySQL을 연동한 서비스를 EC2에 배포했습니다.</p></div>
+    </div>
+  </div>
+</section></div>
+
+<!-- 13 교육 · 진행 중 -->
+<div class="slide-wrap" id="education"><section class="slide">
   <p class="kicker">Education · In Progress</p>
-  <h2>교육과 지금 하고 있는 것</h2>
-  <div class="grid3" style="margin-top:26px">
-    <div class="card"><p class="kicker">2026.02 ~ 2026.08 · 수료</p><h3>IBM x Red Hat AI 부트캠프</h3><p class="mute" style="margin-top:8px;font-size:15px">Python · FastAPI · React · MySQL · Docker · AWS 기반 웹 서비스 개발 과정. 중간 프로젝트 GIUT, 최종 프로젝트 TUKTAK 수행.</p></div>
-    <div class="card now"><p class="kicker">2026.08.23 ~ 2026.10.22 · 진행 중</p><h3>심화 생성형 AI 활용 인재양성 부트캠프</h3><p class="mute" style="margin-top:8px;font-size:15px">기성 모델을 가져다 쓰는 단계를 넘어, 직접 학습시킨 모델을 서비스에 연결하는 방법을 익히는 중입니다.</p></div>
-    <div class="card"><p class="kicker">2018.03 ~ 2021.02</p><h3>경민대학교</h3><p class="mute" style="margin-top:8px;font-size:15px">호텔관광경영과 졸업</p></div>
+  <h2 style="margin-top:16px">교육과 지금 하고 있는 것</h2>
+  <div class="row" style="margin-top:44px;gap:34px">
+    <div class="card col"><p class="kicker" style="font-size:17px">2026.02 ~ 2026.08 · 수료</p><h3 style="margin-top:12px">IBM x Red Hat AI 부트캠프</h3><p class="mute" style="margin-top:10px">Python · FastAPI · React · MySQL · Docker · AWS 기반 웹 서비스 개발 과정. 중간 프로젝트 GIUT, 최종 프로젝트 TUKTAK 수행.</p></div>
+    <div class="card col" style="border-color:var(--blue)"><p class="kicker" style="font-size:17px">2026.08.23 ~ 2026.10.22 · 진행 중</p><h3 style="margin-top:12px">심화 생성형 AI 활용 인재양성 부트캠프</h3><p class="mute" style="margin-top:10px">기성 모델을 가져다 쓰는 단계를 넘어, 직접 학습시킨 모델을 서비스에 연결하는 방법을 익히는 중입니다.</p></div>
+    <div class="card col"><p class="kicker" style="font-size:17px">2018.03 ~ 2021.02</p><h3 style="margin-top:12px">경민대학교</h3><p class="mute" style="margin-top:10px">호텔관광경영과 졸업</p></div>
   </div>
-</div></section>
+  <div class="card" style="margin-top:34px;padding:34px 40px">
+    <h3>다음 프로젝트에서는 직접 학습시킨 모델을 메인으로 둡니다</h3>
+    <p class="mute" style="margin-top:12px">지금까지는 기성 모델을 비교 · 검증해 서비스 기준에 맞게 연결하는 일을 했습니다. 진행 중인 파이널 프로젝트에서는 데이터 구축 → 모델 비교 → 파인튜닝 → 전 · 후 수치 비교까지 직접 학습한 모델로 남기는 것을 목표로 하고 있습니다.</p>
+  </div>
+</section></div>
 
-<footer id="contact"><div class="wrap">
-  <p class="kicker" style="color:rgba(255,255,255,.8)">Contact</p>
-  <h2>감사합니다.</h2>
-  <p>AI 결과를 검증해서 서비스에 안전하게 연결하는 일을 계속 잘하고 싶습니다.</p>
-  <p style="margin-top:18px">020799@naver.com &nbsp;·&nbsp; github.com/JW020799 &nbsp;·&nbsp; jw020799.github.io</p>
-  <a class="btn" href="mailto:020799@naver.com">메일 보내기</a>
-</div></footer>
+<!-- 14 마무리 -->
+<div class="slide-wrap" id="contact"><section class="slide dark">
+  <div style="margin-top:150px">
+    <p class="kicker">Thank you</p>
+    <h1 style="margin-top:30px;font-size:84px;color:#fff">감사합니다.</h1>
+    <p style="margin-top:34px;font-size:26px;color:rgba(255,255,255,.85);line-height:1.6">AI 결과를 검증해서 서비스에 안전하게 연결하는 일을<br>계속 잘하고 싶습니다.</p>
+  </div>
+  <div style="position:absolute;left:110px;bottom:96px;color:#fff">
+    <p style="font-size:30px;font-weight:800">전지원</p>
+    <p style="margin-top:12px;font-size:20px;color:rgba(255,255,255,.85)"><a href="mailto:020799@naver.com">020799@naver.com</a> &nbsp;·&nbsp; <a href="https://github.com/JW020799" target="_blank" rel="noopener">github.com/JW020799</a> &nbsp;·&nbsp; jw020799.github.io</p>
+  </div>
+</section></div>
+
+</main>
+<script>
+(function(){
+  function fit(){
+    var w=document.documentElement.clientWidth, mobile=w<900;
+    document.body.classList.toggle('m',mobile);
+    var avail=Math.min(w-48,1600), sc=Math.min(1,avail/1920);
+    document.querySelectorAll('.slide-wrap').forEach(function(el){
+      var s=el.firstElementChild;
+      if(mobile){s.style.transform='';el.style.height='';el.style.width='';return;}
+      s.style.transform='scale('+sc+')';
+      el.style.width=(1920*sc)+'px';
+      el.style.height=(1080*sc)+'px';
+    });
+  }
+  fit(); window.addEventListener('resize',fit);
+})();
+</script>
 </body>
 </html>
