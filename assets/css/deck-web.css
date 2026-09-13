@@ -4,7 +4,7 @@ body.web{background:#e6e9f3;margin:0}
 .deck-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #d9dcea}
 .deck-nav .in{max-width:1600px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
 .deck-nav .brand{font-weight:800;font-size:18px;color:#1c2140;text-decoration:none}
-.deck-nav .brand span{color:#2d3be6;font-size:12px;letter-spacing:.1em;margin-left:8px}
+.deck-nav .brand span{color:#2d3be6;font-size:13px;margin-left:8px}
 .deck-nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
 .deck-nav a{color:#1c2140;text-decoration:none;font-size:14px;font-weight:700}
 .deck-nav a:hover{color:#2d3be6}
@@ -55,3 +55,7 @@ body.m .slide [style*="font-size:28px"],body.m .slide [style*="font-size:26px"],
 body.m .slide [style*="font-size:36px"],body.m .slide [style*="font-size:34px"],body.m .slide [style*="font-size:30px"]{font-size:22px!important}
 body.m .slide [style*="font-size:20px"],body.m .slide [style*="font-size:22px"]{font-size:14px!important}
 body.m .slide p br{display:none}
+
+body.m .tree{font-size:11px;overflow-x:auto}
+body.m table.ev{font-size:13px}
+body.m .ev5 i{width:12px;height:8px}
